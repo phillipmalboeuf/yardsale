@@ -1,0 +1,42 @@
+.h0 {
+  font-size: calc(var(--base) * var(--scale) * 5);
+}
+
+h1,
+.h1 {
+	font-size: calc(var(--base) * var(--scale) * 3);
+  line-height: 1;
+}
+
+h2,
+.h2 {
+	font-size: calc(var(--base) * var(--scale) * 2);
+  line-height: 1;
+}
+
+h3,
+.h3 {
+  font-size: calc(var(--base) * var(--scale) * 1.25);
+  font-family: var(--alt);
+}
+
+h4,
+.h4 {
+  font-size: calc(var(--base) * var(--scale));
+}
+
+h5,
+.h5 {
+  font-size: calc(var(--base) * var(--scale));
+}
+
+h6,
+.h6 {
+  font-size: calc(var(--base) / var(--scale));
+  font-family: var(--alt);
+  text-transform: uppercase;
+}
+
+.subtitle {
+  font-size: calc(var(--base) * var(--scale) * 0.75);
+}

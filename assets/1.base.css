@@ -1,0 +1,69 @@
+:root {
+	font-family: var(--text);
+	background-color: var(--pistachio);
+	color: var(--moss);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+	font-size: var(--base);
+  line-height: var(--scale);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--display);
+  font-weight: normal;
+  margin-top: 0;
+  margin-bottom: calc(var(--base) * var(--scale) * 2);
+}
+
+p {
+	line-height: var(--scale);
+  margin-top: 0;
+  margin-bottom: var(--base);
+}
+
+a {
+	color: currentColor;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+p > a {
+  text-decoration: underline;
+}
+
+input,
+button {
+	font-size: inherit;
+	color: inherit;
+	font-family: inherit;
+	text-transform: inherit;
+  background: transparent;
+  border: none;
+	padding: var(--base) calc(var(--base) * var(--scale));
+
+  border-radius: var(--gap);
+  background: rgba(255, 255, 255, 0.10);
+  backdrop-filter: blur(14px);
+}
+
+button {
+	cursor: pointer;
+  font-weight: bold;
+  padding: calc(var(--base) / var(--scale)) var(--base);
+}
+
+button:focus:not(:focus-visible) {
+	outline: none;
+}

@@ -1,0 +1,41 @@
+@font-face {
+  font-family: "Catalogue";
+  font-weight: normal;
+  src: url("CatalogueLLSub-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Catalogue";
+  font-weight: normal;
+  src: url("CatalogueLLSub-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Catalogue";
+  font-weight: bold;
+  src: url("CatalogueLLSub-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Catalogue";
+  font-weight: bold;
+  src: url("CatalogueLLSub-Bold.woff2") format("woff2");
+}
+
+:root {
+  --base: 15px;
+  --scale: 2;
+  --gap: calc(var(--base) * var(--scale));
+
+  --display: "Catalogue", serif;
+  --text: "Roobert", sans-serif;
+  --alt: serif;
+
+  --black: #000;
+  --navy: #00147A;
+  --marine: #0D59CB;
+  --off_white: #F5F5DC;
+  --white: #FFF;
+  --dark-grey: #777777;
+  --light-grey: #999999;
+}

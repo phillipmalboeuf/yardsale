@@ -1,0 +1,28 @@
+form {
+  margin-bottom: calc(var(--base) * var(--scale));
+}
+
+.field {
+  display: inline-block;
+  position: relative;
+  max-width: 350px;
+  width: 100%;
+}
+
+.field input {
+  max-width: 350px;
+  width: 100%;
+}
+
+.field label,
+.field button {
+  position: absolute;
+  top: 50%;
+  left: calc(var(--base) * var(--scale));
+  transform: translateY(-50%);
+}
+
+.field button {
+  left: auto;
+  right: calc(var(--base));
+}

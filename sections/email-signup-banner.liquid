@@ -61,23 +61,29 @@
                     </button>
                   </div>
                   {%- if form.errors -%}
+                    <script>
+                      document.body.classList.toggle('success', true);
+                    </script>
                     <small class="newsletter-form__message form__message" id="Newsletter-error--{{ section.id }}">
-                      {%- render 'icon-error' -%}
+                      {% comment %} {%- render 'icon-error' -%} {% endcomment %}
                       {{- form.errors.translated_fields.email | capitalize }}
                       {{ form.errors.messages.email -}}
                     </small>
                   {%- endif -%}
                 </div>
                 {%- if form.posted_successfully? -%}
-                  <h3
+                  <script>
+                    document.body.classList.toggle('success', true);
+                  </script>
+                  <strong
                     class="newsletter-form__message newsletter-form__message--success form__message"
                     id="Newsletter-success--{{ section.id }}"
                     tabindex="-1"
                     autofocus
                   >
-                    {% render 'icon-success' -%}
+                    {% comment %} {% render 'icon-success' -%} {% endcomment %}
                     {{- 'newsletter.success' | t }}
-                  </h3>
+                  </strong>
                 {%- endif -%}
               {% endform %}
             </div>

@@ -8,4 +8,5 @@
 
 .banner__content {
   max-width: 888px;
+  margin: calc(var(--base) * var(--scale)) calc(var(--base) * var(--scale)) 0;
 }

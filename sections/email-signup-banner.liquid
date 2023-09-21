@@ -44,20 +44,20 @@
                       {% elsif form.posted_successfully? %}
                         aria-describedby="Newsletter-success--{{ section.id }}"
                       {% endif %}
-                      placeholder="{{ 'newsletter.label' | t }}"
+                      placeholder="{{ block.settings.label }}"
                       required
                     >
                     <label class="field__label" for="NewsletterForm--{{ section.id }}">
-                      {{ 'newsletter.label' | t }}
+                      {{ block.settings.label }}
                     </label>
                     <button
                       type="submit"
                       class="newsletter-form__button field__button"
                       name="commit"
                       id="Subscribe"
-                      aria-label="{{ 'newsletter.button_label' | t }}"
+                      aria-label="{{ block.settings.text }}"
                     >
-                      {{ 'newsletter.button_label' | t }}
+                      {{ block.settings.button }}
                     </button>
                   </div>
                   {%- if form.errors -%}
@@ -82,7 +82,8 @@
                     autofocus
                   >
                     {% comment %} {% render 'icon-success' -%} {% endcomment %}
-                    {{- 'newsletter.success' | t }}
+                    {% comment %} {{- 'newsletter.success' | t }} {% endcomment %}
+                    {{ block.settings.success }}
                   </strong>
                 {%- endif -%}
               {% endform %}
@@ -208,7 +209,27 @@
     {
       "type": "email_form",
       "name": "t:sections.email-signup-banner.blocks.email_form.name",
-      "limit": 1
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "label",
+          "default": "Subscribe by email",
+          "label": "Input label"
+        },
+        {
+          "type": "text",
+          "id": "button",
+          "default": "Sign up",
+          "label": "Button label"
+        },
+        {
+          "type": "text",
+          "id": "success",
+          "default": "Thank you for subscribing",
+          "label": "Success message"
+        }
+      ]
     }
   ],
   "presets": [

@@ -69,6 +69,11 @@ button {
   padding: calc(var(--base) / var(--scale)) var(--base);
 }
 
+button:focus,
+button:hover {
+  background: var(--light-grey);
+}
+
 button:focus:not(:focus-visible),
 input:focus {
 	outline: none;

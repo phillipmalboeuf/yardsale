@@ -2,6 +2,23 @@ form {
   margin-bottom: calc(var(--base) * var(--scale));
 }
 
+input:focus {
+  color: var(--black);
+	background: var(--white);
+}
+
+input:focus + label {
+  color: var(--black);
+}
+
+input:focus ~ button {
+  background: var(--black);
+}
+
+input:focus ~ button:hover {
+  background: var(--dark-grey);
+}
+
 .field {
   display: inline-block;
   position: relative;
@@ -15,8 +32,9 @@ form {
 }
 
 .field input:not(:placeholder-shown) + label {
-  top: 0;
-  font-size: 0.8em;
+  display: none;
+  /* top: 0;
+  font-size: 0.8em; */
 }
 
 .field label,

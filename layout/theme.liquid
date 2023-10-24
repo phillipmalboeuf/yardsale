@@ -42,14 +42,21 @@
     {{ '0.variables.css' | asset_url | stylesheet_tag }}
     {{ '1.base.css' | asset_url | stylesheet_tag }}
     {{ '1.text.css' | asset_url | stylesheet_tag }}
+    {{ '1.icons.css' | asset_url | stylesheet_tag }}
+    {{ '1.buttons.css' | asset_url | stylesheet_tag }}
     {{ '1.animations.css' | asset_url | stylesheet_tag }}
     {{ '1.inputs.css' | asset_url | stylesheet_tag }}
     {{ '2.header.css' | asset_url | stylesheet_tag }}
+    {{ '2.footer.css' | asset_url | stylesheet_tag }}
 
-    {%- if localization.available_countries.size > 1 or localization.available_languages.size > 1 -%}
-      {{ 'component-localization-form.css' | asset_url | stylesheet_tag: preload: true }}
-      <script src="{{ 'localization-form.js' | asset_url }}" defer="defer"></script>
-    {%- endif -%}
+    {%- render 'colors' -%}
+
+    {% comment %}
+       {%- if localization.available_countries.size > 1 or localization.available_languages.size > 1 -%}
+        {{ 'component-localization-form.css' | asset_url | stylesheet_tag: preload: true }}
+        <script src="{{ 'localization-form.js' | asset_url }}" defer="defer"></script>
+      {%- endif -%}
+    {% endcomment %}
 
     {%- if settings.predictive_search_enabled -%}
       <link
@@ -68,10 +75,12 @@
     </script>
   </head>
 
-  <body class="{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
-    <a class="skip-to-content-link button visually-hidden" href="#MainContent">
-      {{ 'accessibility.skip_to_text' | t }}
-    </a>
+  <body>
+    {% comment %}
+       <a class="skip-to-content-link button visually-hidden" href="#MainContent">
+        {{ 'accessibility.skip_to_text' | t }}
+      </a>
+    {% endcomment %}
 
     {% comment %}
        {%- if settings.cart_type == 'drawer' -%}
@@ -79,13 +88,13 @@
       {%- endif -%}
     {% endcomment %}
 
-    {% comment %} {% sections 'header-group' %} {% endcomment %}
+    {% sections 'header-group' %}
 
-    <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
-      {{ content_for_layout }}
+    <main id="MainContent" role="main" tabindex="-1">
+      {% comment %} {{ content_for_layout }} {% endcomment %}
     </main>
 
-    {% comment %} {% sections 'footer-group' %} {% endcomment %}
+    {% sections 'footer-group' %}
 
     <ul hidden>
       <li id="a11y-refresh-page-message">{{ 'accessibility.refresh_page' | t }}</li>
@@ -124,8 +133,12 @@
       };
     </script>
 
-    {%- if settings.predictive_search_enabled -%}
-      <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
-    {%- endif -%}
+    {% comment %}
+       {%- if settings.predictive_search_enabled -%}
+        <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
+      {%- endif -%}
+    {% endcomment %}
+
+    <script src="{{ 'script.js' | asset_url }}" defer="defer"></script>
   </body>
 </html>

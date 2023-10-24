@@ -1,0 +1,7 @@
+.icon {
+  width: calc(var(--base) * var(--scale) / 1.333);
+  height: calc(var(--base) * var(--scale) / 1.333);
+
+  display: inline-block;
+  vertical-align: middle;
+}

@@ -1,0 +1,15 @@
+.button,
+button {
+  display: flex;
+  padding: calc(var(--base)) calc(var(--base) * var(--scale));
+  justify-content: center;
+  align-items: center;
+  gap: calc(var(--base) / var(--scale) * 1.5);
+  flex-shrink: 0;
+
+  text-transform: uppercase;
+
+  border-radius: 55px;
+  background: rgba(255, 255, 255, 0.10);
+  backdrop-filter: blur(12px);
+}

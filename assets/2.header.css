@@ -1,10 +1,29 @@
-.header {
-  position: fixed;
+.header,
+.announcement-bar {
+  position: sticky;
   top: 0;
   left: 0;
   width: 100vw;
 
   display: flex;
-  justify-content: center;
-  padding: calc(var(--base) * var(--scale));
+  justify-content: space-between;
+  align-items: center;
+  color: rgb(var(--color-foreground));
+  background: rgb(var(--color-background));
+  padding: calc(var(--gap) / var(--scale));
 }
+
+.announcement-bar {
+  justify-content: center;
+  padding: calc(var(--base) / var(--scale));
+}
+
+  .header nav {
+    flex: 1;
+    display: flex;
+    gap: calc(var(--gap));
+  }
+
+  .header nav:last-child {
+    justify-content: flex-end;
+  }

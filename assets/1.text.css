@@ -55,3 +55,21 @@ h6,
     font-size: calc(var(--base));
   }
 }
+
+.medium {
+  font-size: calc(var(--base) * var(--scale));
+  line-height: 1.2;
+
+  @media (max-width: 888px) {
+    font-size: calc(var(--base));
+  }
+}
+
+.large {
+  font-size: calc(var(--base) * var(--scale) * 2);
+  line-height: 1.2;
+
+  @media (max-width: 888px) {
+    font-size: calc(var(--base) * var(--scale));
+  }
+}

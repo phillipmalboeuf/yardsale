@@ -20,7 +20,7 @@
               {% render 'logo' %}
             </a>
             {%- if block.settings.menu != blank -%}
-              <ul class="list--unstyled">
+              <ul class="list--unstyled {{ block.settings.text_size }}">
                 {%- for link in block.settings.menu.links -%}
                   <li>
                     <a
@@ -424,6 +424,26 @@
           "default": "footer",
           "label": "t:sections.footer.blocks.link_list.settings.menu.label",
           "info": "t:sections.footer.blocks.link_list.settings.menu.info"
+        },
+        {
+          "type": "select",
+          "id": "text_size",
+          "options": [
+            {
+              "value": "small",
+              "label": "t:sections.rich-text.blocks.caption.settings.caption_size.options__1.label"
+            },
+            {
+              "value": "medium",
+              "label": "t:sections.rich-text.blocks.caption.settings.caption_size.options__2.label"
+            },
+            {
+              "value": "large",
+              "label": "t:sections.rich-text.blocks.caption.settings.caption_size.options__3.label"
+            }
+          ],
+          "default": "medium",
+          "label": "t:sections.rich-text.blocks.caption.settings.caption_size.label"
         }
       ]
     },

@@ -13,6 +13,9 @@
     --color-foreground: {{ scheme.settings.text.red }},{{ scheme.settings.text.green }},{{ scheme.settings.text.blue }};
     --color-button: {{ scheme.settings.button.red }},{{ scheme.settings.button.green }},{{ scheme.settings.button.blue }};
     --color-button-label: {{ scheme.settings.button_label.red }},{{ scheme.settings.button_label.green }},{{ scheme.settings.button_label.blue }};
+
+    color: rgb(var(--color-foreground));
+    background-color: rgb(var(--color-background));
   }
   {% endfor %}
 {% endstyle %}

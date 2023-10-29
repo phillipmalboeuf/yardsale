@@ -1,18 +1,5 @@
 {{ 'component-image-with-text.css' | asset_url | stylesheet_tag }}
-
-{%- style -%}
-  .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
-  }
-
-  @media screen and (min-width: 750px) {
-    .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top }}px;
-      padding-bottom: {{ section.settings.padding_bottom }}px;
-    }
-  }
-{%- endstyle -%}
+{{ '2.multirow.css' | asset_url | stylesheet_tag }}
 
 {%- liquid
   if section.settings.image_layout contains 'right'
@@ -42,14 +29,14 @@
   endunless
 -%}
 
-<div class="multirow section-{{ section.id }}-padding gradient color-{{ section.settings.section_color_scheme }}">
-  <div class="multirow__inner page-width">
+<div class="multirow color-{{ section.settings.section_color_scheme }}">
+  <div class="multirow__inner">
     {%- for block in section.blocks -%}
       <div
-        class="image-with-text isolate{{ borders_class }}{{ corners_class }}{{ padding_class }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+        class="image-with-text {{ borders_class }}{{ corners_class }} {{ section.settings.image_layout }}"
         {{ block.shopify_attributes }}
       >
-        <div class="image-with-text__grid grid grid--gapless grid--1-col grid--{% if section.settings.desktop_image_width == 'medium' %}2-col-tablet{% else %}3-col-tablet{% endif %}{% if section.settings.image_layout contains 'alternate' %}{% cycle odd_class, even_class %}{% else %}{{ odd_class }}{% endif %}">
+        <div class="image-with-text__grid grid grid--gapless grid--1 grid--{% if section.settings.desktop_image_width == 'medium' %}2{% else %}3{% endif %}{% if section.settings.image_layout contains 'alternate' %}{% cycle odd_class, even_class %}{% else %}{{ odd_class }}{% endif %}">
           <div class="image-with-text__media-item image-with-text__media-item--{{ section.settings.desktop_image_width }} image-with-text__media-item--{{ section.settings.desktop_content_position }} grid__item">
             <div
               class="image-with-text__media image-with-text__media--{{ section.settings.image_height }} gradient color-{{ section.settings.row_color_scheme }} global-media-settings{% if block.settings.image != blank %} media{% else %} image-with-text__media--placeholder placeholder{% endif %}"
@@ -165,15 +152,15 @@
       "id": "heading_size",
       "options": [
         {
-          "value": "h2",
+          "value": "h3",
           "label": "t:sections.multirow.settings.heading_size.options__1.label"
         },
         {
-          "value": "h1",
+          "value": "h2",
           "label": "t:sections.multirow.settings.heading_size.options__2.label"
         },
         {
-          "value": "h0",
+          "value": "h1",
           "label": "t:sections.multirow.settings.heading_size.options__3.label"
         }
       ],
@@ -272,6 +259,14 @@
         {
           "value": "align-right",
           "label": "t:sections.multirow.settings.image_layout.options__4.label"
+        },
+        {
+          "value": "float-left",
+          "label": "Float left"
+        },
+        {
+          "value": "float-right",
+          "label": "Float right"
         }
       ],
       "default": "alternate-left",
@@ -313,30 +308,6 @@
       ],
       "default": "left",
       "label": "t:sections.multirow.settings.mobile_content_alignment.label"
-    },
-    {
-      "type": "header",
-      "content": "t:sections.all.padding.section_padding_heading"
-    },
-    {
-      "type": "range",
-      "id": "padding_top",
-      "min": 0,
-      "max": 100,
-      "step": 4,
-      "unit": "px",
-      "label": "t:sections.all.padding.padding_top",
-      "default": 36
-    },
-    {
-      "type": "range",
-      "id": "padding_bottom",
-      "min": 0,
-      "max": 100,
-      "step": 4,
-      "unit": "px",
-      "label": "t:sections.all.padding.padding_bottom",
-      "default": 36
     }
   ],
   "blocks": [

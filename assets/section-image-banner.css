@@ -39,16 +39,6 @@
   }
 }
 
-.banner__media.animate--zoom-in {
-  clip-path: inset(0px);
-}
-
-.banner__media.animate--zoom-in > img:not(.zoom):not(.deferred-media__poster-button),
-.banner__media.animate--zoom-in > svg:not(.zoom):not(.deferred-media__poster-button) {
-  position: fixed;
-  height: 100vh;
-}
-
 @media screen and (max-width: 749px) {
   .banner--small.banner--mobile-bottom:not(.banner--adapt) .banner__media,
   .banner--small.banner--stacked:not(.banner--mobile-bottom):not(.banner--adapt) > .banner__media {
@@ -173,29 +163,7 @@
   left: auto;
 }
 
-.banner__media-half.animate--fixed:first-child > img,
-.banner__media-half.animate--zoom-in:first-child > img {
-  width: 50%;
-}
-
-.banner__media-half.animate--fixed:nth-child(2) > img,
-.banner__media-half.animate--zoom-in:nth-child(2) > img {
-  left: 50%;
-  width: 50%;
-}
-
 @media screen and (max-width: 749px) {
-  .banner--stacked .animate--fixed:first-child > img,
-  .banner--stacked .animate--zoom-in:first-child > img {
-    width: 100%;
-  }
-
-  .banner--stacked .banner__media-half.animate--fixed:nth-child(2) > img,
-  .banner--stacked .banner__media-half.animate--zoom-in:nth-child(2) > img {
-    left: 0;
-    width: 100%;
-  }
-
   .banner--stacked .banner__media-half {
     width: 100%;
   }
@@ -276,7 +244,7 @@
 
 @media screen and (min-width: 750px) {
   .banner__content {
-    padding: 5rem;
+    padding: var(--gap);
   }
 
   .banner__content--top-left {
@@ -337,7 +305,7 @@
 }
 
 .banner__box {
-  padding: 4rem 3.5rem;
+  padding: var(--gap);
   position: relative;
   height: fit-content;
   align-items: center;
@@ -385,17 +353,17 @@
 }
 
 .banner__box > * + .banner__text {
-  margin-top: 1.5rem;
+  margin-top: var(--gap);
 }
 
 @media screen and (min-width: 750px) {
   .banner__box > * + .banner__text {
-    margin-top: 2rem;
+    margin-top: var(--gap);
   }
 }
 
 .banner__box > * + * {
-  margin-top: 1rem;
+  margin-top: var(--gap);
 }
 
 .banner__box > *:first-child {
@@ -427,13 +395,13 @@
 }
 
 .banner__box .banner__heading + * {
-  margin-top: 1rem;
+  margin-top: var(--gap);
 }
 
 .banner__buttons {
   display: inline-flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: var(--gap);
   max-width: 45rem;
   word-break: break-word;
 }
@@ -461,7 +429,7 @@
 }
 
 .banner__box > * + .banner__buttons {
-  margin-top: 2rem;
+  margin-top: var(--gap);
 }
 
 @media screen and (max-width: 749px) {

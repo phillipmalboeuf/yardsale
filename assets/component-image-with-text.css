@@ -7,8 +7,12 @@
 }
 
 @media screen and (min-width: 750px) {
-  .image-with-text__grid--reverse {
-    flex-direction: row-reverse;
+  .image-with-text__grid--reverse div:first-child {
+    order: 1;
+  }
+
+  .image-with-text__grid--reverse div:last-child {
+    order: -1;
   }
 }
 
@@ -93,6 +97,7 @@
 }
 
 .image-with-text .grid__item::after {
+  pointer-events: none;
   content: '';
   position: absolute;
   top: 0;
@@ -332,7 +337,7 @@
 
 @media screen and (min-width: 990px) {
   .image-with-text__content {
-    padding: 6rem 7rem 7rem;
+    padding: var(--gap);
   }
 }
 

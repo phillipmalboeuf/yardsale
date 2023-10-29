@@ -44,6 +44,7 @@
     {{ '1.text.css' | asset_url | stylesheet_tag }}
     {{ '1.icons.css' | asset_url | stylesheet_tag }}
     {{ '1.buttons.css' | asset_url | stylesheet_tag }}
+    {{ '1.grid.css' | asset_url | stylesheet_tag }}
     {{ '1.animations.css' | asset_url | stylesheet_tag }}
     {{ '1.inputs.css' | asset_url | stylesheet_tag }}
     {{ '2.header.css' | asset_url | stylesheet_tag }}
@@ -58,14 +59,16 @@
       {%- endif -%}
     {% endcomment %}
 
-    {%- if settings.predictive_search_enabled -%}
-      <link
-        rel="stylesheet"
-        href="{{ 'component-predictive-search.css' | asset_url }}"
-        media="print"
-        onload="this.media='all'"
-      >
-    {%- endif -%}
+    {% comment %}
+       {%- if settings.predictive_search_enabled -%}
+        <link
+          rel="stylesheet"
+          href="{{ 'component-predictive-search.css' | asset_url }}"
+          media="print"
+          onload="this.media='all'"
+        >
+      {%- endif -%}
+    {% endcomment %}
 
     <script>
       document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
@@ -91,7 +94,7 @@
     {% sections 'header-group' %}
 
     <main id="MainContent" role="main" tabindex="-1">
-      {% comment %} {{ content_for_layout }} {% endcomment %}
+      {{ content_for_layout }}
     </main>
 
     {% sections 'footer-group' %}

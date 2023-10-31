@@ -106,3 +106,9 @@ video {
 .hidden {
   display: none;
 }
+
+.visually-hidden {
+  position: absolute;
+  left: -5000px;
+  height: 0;
+}

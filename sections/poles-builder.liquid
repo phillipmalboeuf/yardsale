@@ -1,0 +1,98 @@
+{% comment %} {{ 'section-main-product.css' | asset_url | stylesheet_tag }} {% endcomment %}
+{{ '3.builder.css' | asset_url | stylesheet_tag }}
+
+<div class="builder builder--{{ section.settings.media_size }} builder--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} builder--mobile-{{ section.settings.mobile_thumbnails }} grid grid--2">
+  <div class="builder__media">
+    <epigraph-configurator-lite id="epigraphConfiguratorLite" experience-id="yardsale-ski" disable-default-ui hidden>
+      <span slot="splash-screen-text"></span>
+    </epigraph-configurator-lite>
+  </div>
+  <div class="builder__info">
+    <h1 class="h2">{{ collection.title }}</h1>
+    {%- for product in collection.products -%}
+      <form class="builder__form">
+        <p>
+          <strong>{{ forloop.index }}. {{ product.title }}</strong>
+        </p>
+        {%- for value in product.options_with_values[0].values -%}
+          {%- assign variants = product.variants | where: 'option1', value -%}
+          {% if variants.size > 1 %}
+            <input
+              type="radio"
+              id="{{ product.id }}-{{ value }}"
+              data-value="{{ value | escape }}"
+              data-3d-class="left{{ product.type }}"
+              name="{{ product.id }}-{{ product.options_with_values[0].name }}"
+              value="{{ value }}"
+              {% if forloop.index0 == 0 %}
+                checked
+              {% endif %}
+              class="{% if product.options_with_values[0].name == 'Color' %} input--color{% endif %}"
+              {% if product.options_with_values[0].name == 'Color' %}
+                style="background-color: var(--{{ value | downcase }});background-image: url('data:image/svg+xml,%3Csvg%20width%3D%2221%22%20height%3D%2221%22%20viewBox%3D%220%200%2021%2021%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%221.33008%22%20y%3D%221.42822%22%20width%3D%2218%22%20height%3D%2218%22%20rx%3D%229%22%20stroke%3D%22%23E1E1E1%22%20stroke-width%3D%222%22%2F%3E%0A%3Crect%20x%3D%220.330078%22%20y%3D%220.427979%22%20width%3D%2220%22%20height%3D%2220%22%20rx%3D%2210%22%20fill%3D%22black%22%2F%3E%0A%3Cg%20clip-path%3D%22url(%23clip0_1961_634)%22%3E%0A%3Cpath%20d%3D%22M14.8771%205.59092C14.4171%205.28992%2013.7951%205.41892%2013.4931%205.88092L8.97307%2012.7939L7.07307%2010.6829C6.70407%2010.2729%206.07207%2010.2379%205.66107%2010.6089C5.25007%2010.9779%205.21707%2011.6109%205.58707%2012.0209L8.35607%2015.0979C8.54607%2015.3089%208.81707%2015.4279%209.09907%2015.4279C9.12407%2015.4279%209.15007%2015.4269%209.17607%2015.4249C9.48607%2015.4019%209.76607%2015.2349%209.93607%2014.9749L15.1671%206.97492C15.4701%206.51292%2015.3401%205.89292%2014.8771%205.59092Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fg%3E%0A%3Cdefs%3E%0A%3CclipPath%20id%3D%22clip0_1961_634%22%3E%0A%3Crect%20width%3D%2220%22%20height%3D%2220%22%20fill%3D%22white%22%20transform%3D%22translate(0.330078%200.427979)%22%2F%3E%0A%3C%2FclipPath%3E%0A%3C%2Fdefs%3E%0A%3C%2Fsvg%3E%0A');"
+              {% endif %}
+            >
+            <label for="{{ product.id }}-{{ value }}">{{ value }}</label>
+            <fieldset>
+              {%- for variant in variants -%}
+                <input
+                  type="radio"
+                  {% if forloop.index0 == 0 %}
+                    checked
+                  {% endif %}
+                  id="{{ product.id }}-{{ variant.id }}"
+                  name="items[{{ product.id }}][id]"
+                  value="{{ variant.id }}"
+                  form="pole-builder"
+                >
+                <label for="{{ product.id }}-{{ variant.id }}">{{ variant.option2 }}</label>
+                {% comment %} {{ variant.id }} {% endcomment %}
+              {%- endfor -%}
+            </fieldset>
+          {%- else -%}
+            <input
+              type="radio"
+              {% if forloop.index0 == 0 %}
+                checked
+              {% endif %}
+              id="{{ product.id }}-{{ variants[0].id }}"
+              data-value="{{ value | escape }}"
+              data-3d-class="left{{ product.type }}"
+              name="items[{{ product.id }}][id]"
+              value="{{ variants[0].id }}"
+              form="pole-builder"
+              class="{% if product.options_with_values[0].name == 'Color' %} input--color{% endif %}"
+              {% if product.options_with_values[0].name == 'Color' %}
+                style="background-color: var(--{{ value | downcase }});background-image: url('data:image/svg+xml,%3Csvg%20width%3D%2221%22%20height%3D%2221%22%20viewBox%3D%220%200%2021%2021%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%221.33008%22%20y%3D%221.42822%22%20width%3D%2218%22%20height%3D%2218%22%20rx%3D%229%22%20stroke%3D%22%23E1E1E1%22%20stroke-width%3D%222%22%2F%3E%0A%3Crect%20x%3D%220.330078%22%20y%3D%220.427979%22%20width%3D%2220%22%20height%3D%2220%22%20rx%3D%2210%22%20fill%3D%22black%22%2F%3E%0A%3Cg%20clip-path%3D%22url(%23clip0_1961_634)%22%3E%0A%3Cpath%20d%3D%22M14.8771%205.59092C14.4171%205.28992%2013.7951%205.41892%2013.4931%205.88092L8.97307%2012.7939L7.07307%2010.6829C6.70407%2010.2729%206.07207%2010.2379%205.66107%2010.6089C5.25007%2010.9779%205.21707%2011.6109%205.58707%2012.0209L8.35607%2015.0979C8.54607%2015.3089%208.81707%2015.4279%209.09907%2015.4279C9.12407%2015.4279%209.15007%2015.4269%209.17607%2015.4249C9.48607%2015.4019%209.76607%2015.2349%209.93607%2014.9749L15.1671%206.97492C15.4701%206.51292%2015.3401%205.89292%2014.8771%205.59092Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fg%3E%0A%3Cdefs%3E%0A%3CclipPath%20id%3D%22clip0_1961_634%22%3E%0A%3Crect%20width%3D%2220%22%20height%3D%2220%22%20fill%3D%22white%22%20transform%3D%22translate(0.330078%200.427979)%22%2F%3E%0A%3C%2FclipPath%3E%0A%3C%2Fdefs%3E%0A%3C%2Fsvg%3E%0A');"
+              {% endif %}
+            >
+            <label for="{{ product.id }}-{{ variants[0].id }}">{{ value }}</label>
+          {%- endif -%}
+        {%- endfor -%}
+      </form>
+    {%- endfor -%}
+
+    <form action="/cart/add" id="pole-builder" method="post">
+      <input type="hidden" name="return_to" value="checkout">
+      <button class="button--primary button--full_width" type="submit">Buy Now</button>
+    </form>
+  </div>
+</div>
+
+<script
+  type="module"
+  src="https://cdn.jsdelivr.net/npm/@epigraph/configurator-lite@1.3.0"
+></script>
+
+{% schema %}
+{
+  "name": "Poles builder",
+  "settings": []
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

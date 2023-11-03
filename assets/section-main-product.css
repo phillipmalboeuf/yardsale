@@ -209,6 +209,8 @@ fieldset.product-form__input .form__label {
   border-radius: 1em;
   border-color: transparent;
   margin-right: calc(var(--gap) / 4);
+  background-repeat: no-repeat;
+  background-position: -100%;
 }
 
 .product-form__input input[type='radio'].product-form__input--color:after {
@@ -224,7 +226,6 @@ fieldset.product-form__input .form__label {
 
 .product-form__input input[type='radio'].product-form__input--color:checked {
   border-color: rgb(var(--color-foreground));
-  background-repeat: no-repeat;
   background-position: 0.66em calc(100% - 0.66em);
 }
 

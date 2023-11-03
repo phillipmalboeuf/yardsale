@@ -33,8 +33,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--display);
   font-weight: normal;
   line-height: 1;
-  margin-top: 0;
-  margin-bottom: calc(var(--base) * var(--scale) * 1);
+  margin: calc(var(--base) * var(--scale) * 1) auto;
 }
 
 h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
@@ -112,3 +111,11 @@ video {
   left: -5000px;
   height: 0;
 }
+
+.page-width {
+  padding: var(--gap);
+}
+
+  .page-width--narrow {
+    max-width: 66rem;
+  }

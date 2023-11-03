@@ -1,0 +1,44 @@
+.builder {
+  background-color: var(--light-grey);
+  padding: var(--gap);
+}
+
+.builder__info,
+.builder__media {
+  background-color: var(--white);
+  /* margin: var(--gap); */
+  padding: var(--gap);
+  border-radius: 0.666rem;
+  align-self: flex-start;
+}
+
+.builder__form {
+  margin: var(--gap) 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(var(--gap) / 4);
+}
+
+.builder__form p {
+  width: 100%;
+}
+
+.builder__form input[type='radio'] + label + fieldset {
+  display: none;
+}
+
+.builder__form input[type='radio']:checked + label + fieldset {
+  display: block;
+  order: 99;
+}
+
+.builder__media {
+  height: 88vh;
+  padding: 0;
+  overflow: hidden; 
+
+  position: sticky;
+  position: -webkit-sticky;
+  top: calc(var(--gap) * 1);
+}
+

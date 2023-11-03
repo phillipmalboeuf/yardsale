@@ -8,12 +8,21 @@
         "footer-0": {
           "type": "link_list",
           "settings": {
-            "menu": "footer"
+            "color_scheme": "accent-1",
+            "heading": "Quick links",
+            "menu": "footer",
+            "text_size": "medium"
           }
         },
         "footer-1": {
           "type": "newsletter",
           "settings": {
+            "color_scheme": "inverse",
+            "heading": "<h6>Newsletter Subscription<\/h6><h5>Subscribe and get 10% off<\/h5>",
+            "label": "Enter your email to join our mailing list",
+            "cta": "Sign up",
+            "tagline": "Serious designfor good times",
+            "subtext": "<p>Share contact information, store details, and brand content with your customers.<\/p>"
           }
         }
       },

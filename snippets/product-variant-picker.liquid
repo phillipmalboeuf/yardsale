@@ -11,16 +11,36 @@
 {% endcomment %}
 {%- unless product.has_only_default_variant -%}
   <form {{ block.shopify_attributes }}>
-    {%- for option in product.options_with_values -%}
-      <fieldset class="product-form__input">
-        <legend class="form__label">{{ option.name }}</legend>
-        {% render 'product-variant-options', product: product, option: option, block: block %}
-      </fieldset>
+    {% comment %}
+       {{ product.variants | json }}
+      {{ product.options | json }}
+    {% endcomment %}
+    {%- for value in product.options_with_values[0].values -%}
+      {%- assign variants = product.variants | where: 'option1', value -%}
+      {% if variants.size > 1 %}
+        <input type="radio" name="{{ product.id }}-{{ product.options_with_values[0].name }}" value="{{ value }}">
+        {{ value }}
+        <fieldset>
+          {%- for variant in variants -%}
+            <input type="radio" name="items[{{ product.id }}][id]" value="{{ variant.id }}" form="pole-builder">
+            {{ variant.option2 }}
+            {{ variant.id }}
+          {%- endfor -%}
+        </fieldset>
+      {%- else -%}
+        <input type="radio" name="items[{{ product.id }}][id]" value="{{ variants[0].id }}" form="pole-builder">
+        {{ value }}
+        {{ variants[0].id }}
+      {%- endif -%}
     {%- endfor -%}
-
-    <script type="application/json">
-      window.variants = {{ product.variants | json }}
-    </script>
+    {% comment %}
+       {%- for option in product.options_with_values -%}
+        <fieldset class="product-form__input">
+          <legend class="form__label">{{ option.name }}</legend>
+          {% render 'product-variant-options', product: product, option: option, block: block, form_id: form_id %}
+        </fieldset>
+      {%- endfor -%}
+    {% endcomment %}
   </form>
   {% comment %}
      {%- if block.settings.picker_type == 'button' -%}

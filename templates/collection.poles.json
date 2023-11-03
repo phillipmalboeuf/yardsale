@@ -1,0 +1,12 @@
+{
+  "sections": {
+    "poles-builder": {
+      "type": "poles-builder",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "poles-builder"
+  ]
+}

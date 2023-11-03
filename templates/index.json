@@ -6,8 +6,8 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Image banner",
-            "heading_size": "h0"
+            "heading": "Ski poles you’ll <strong>actually<\/strong> want to brag about",
+            "heading_size": "h2"
           }
         },
         "text": {
@@ -16,51 +16,6 @@
             "text": "Give customers details about the banner image(s) or content on the template.",
             "text_style": "body"
           }
-        },
-        "button": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify:\/\/collections\/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading",
-        "text",
-        "button"
-      ],
-      "settings": {
-        "image_overlay_opacity": 40,
-        "image_height": "large",
-        "desktop_content_position": "bottom-center",
-        "show_text_box": false,
-        "desktop_content_alignment": "center",
-        "color_scheme": "inverse",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
-        "show_text_below": false
-      }
-    },
-    "rich_text": {
-      "type": "rich-text",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Talk about your brand",
-            "heading_size": "h1"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
-          }
         }
       },
       "block_order": [
@@ -68,65 +23,48 @@
         "text"
       ],
       "settings": {
-        "color_scheme": "background-1"
+        "image": "shopify:\/\/shop_images\/Screenshot_2023-10-15_at_6.35.03_PM.png",
+        "image_overlay_opacity": 0,
+        "image_height": "small",
+        "desktop_content_position": "bottom-left",
+        "show_text_box": false,
+        "desktop_content_alignment": "left",
+        "color_scheme": "inverse",
+        "mobile_content_alignment": "left",
+        "stack_images_on_mobile": false,
+        "show_text_below": false
       }
     },
-    "featured_collection": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "Featured products",
-        "heading_size": "h2",
-        "collection": "all",
-        "products_to_show": 8,
-        "columns_desktop": 4,
-        "show_view_all": false,
-        "color_scheme": "background-1",
-        "image_ratio": "adapt",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 28,
-        "padding_bottom": 36
-      }
-    },
-    "collage": {
-      "type": "collage",
+    "rich_text": {
+      "type": "rich-text",
       "blocks": {
-        "collection-0": {
-          "type": "collection",
+        "text": {
+          "type": "text",
           "settings": {
-            "collection": ""
+            "text": "<p>At Yardsale, we believe you don’t have to be the most serious skier on the mountain to have a great day. You just need good people, great products, and some sunshine. <\/p>",
+            "text_size": "medium"
           }
         },
-        "product": {
-          "type": "product",
+        "dde367d0-110c-4d3c-81a3-e3b914edb281": {
+          "type": "button",
           "settings": {
-            "product": "",
-            "second_image": false
-          }
-        },
-        "collection-1": {
-          "type": "collection",
-          "settings": {
-            "collection": ""
+            "button_label": "Learn more →",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
           }
         }
       },
       "block_order": [
-        "collection-0",
-        "product",
-        "collection-1"
+        "text",
+        "dde367d0-110c-4d3c-81a3-e3b914edb281"
       ],
       "settings": {
-        "heading": "Multimedia collage",
-        "heading_size": "h2",
-        "desktop_layout": "left",
-        "mobile_layout": "collage",
-        "color_scheme": "background-1",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "desktop_content_position": "center",
+        "content_alignment": "left",
+        "color_scheme": "background-1"
       }
     },
     "video": {
@@ -134,6 +72,7 @@
       "settings": {
         "heading": "",
         "heading_size": "h1",
+        "enable_video_looping": false,
         "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
         "description": "",
         "full_width": false,
@@ -142,63 +81,78 @@
         "padding_bottom": 36
       }
     },
-    "multicolumn": {
-      "type": "multicolumn",
+    "742133b8-6152-4597-a606-78a079616c87": {
+      "type": "multirow",
       "blocks": {
-        "column1": {
-          "type": "column",
+        "template--21549409567031__742133b8-6152-4597-a606-78a079616c87-row-1": {
+          "type": "row",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
+            "image": "shopify:\/\/shop_images\/ae26248bfd173cf9debbd247bddc92f5.jpg",
+            "caption": "",
+            "heading": "They’re magnetic",
+            "text": "",
+            "button_label": "",
+            "button_link": ""
           }
         },
-        "column2": {
-          "type": "column",
+        "template--21549409567031__742133b8-6152-4597-a606-78a079616c87-row-2": {
+          "type": "row",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
+            "image": "shopify:\/\/shop_images\/ae26248bfd173cf9debbd247bddc92f5.jpg",
+            "caption": "",
+            "heading": "Straps that stay open",
+            "text": "",
+            "button_label": "",
+            "button_link": ""
           }
         },
-        "column3": {
-          "type": "column",
+        "template--21549409567031__742133b8-6152-4597-a606-78a079616c87-row-3": {
+          "type": "row",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
+            "image": "shopify:\/\/shop_images\/ae26248bfd173cf9debbd247bddc92f5.jpg",
+            "caption": "",
+            "heading": "Capture iconic moments",
+            "text": "",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "b426a280-0b91-4e03-bf29-8ffd9ea228d1": {
+          "type": "row",
+          "settings": {
+            "caption": "",
+            "heading": "Mix-and-match colors",
+            "text": "",
+            "button_label": "",
+            "button_link": ""
           }
         }
       },
       "block_order": [
-        "column1",
-        "column2",
-        "column3"
+        "template--21549409567031__742133b8-6152-4597-a606-78a079616c87-row-1",
+        "template--21549409567031__742133b8-6152-4597-a606-78a079616c87-row-2",
+        "template--21549409567031__742133b8-6152-4597-a606-78a079616c87-row-3",
+        "b426a280-0b91-4e03-bf29-8ffd9ea228d1"
       ],
       "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "third",
-        "image_ratio": "adapt",
-        "columns_desktop": 3,
-        "column_alignment": "center",
-        "background_style": "none",
-        "button_label": "",
-        "button_link": "",
-        "color_scheme": "background-1",
-        "columns_mobile": "1"
+        "image_height": "medium",
+        "desktop_image_width": "medium",
+        "heading_size": "h3",
+        "text_style": "body",
+        "button_style": "secondary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "image_layout": "float-right",
+        "section_color_scheme": "",
+        "row_color_scheme": "",
+        "mobile_content_alignment": "left"
       }
     }
   },
   "order": [
     "image_banner",
     "rich_text",
-    "featured_collection",
-    "collage",
     "video",
-    "multicolumn"
+    "742133b8-6152-4597-a606-78a079616c87"
   ]
 }

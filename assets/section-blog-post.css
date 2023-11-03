@@ -1,5 +1,5 @@
 .article-template > *:first-child:not(.article-template__hero-container) {
-  margin-top: 5rem;
+  padding: calc(var(--gap) * 2);
 }
 
 @media screen and (min-width: 750px) {
@@ -54,8 +54,7 @@
 }
 
 .article-template header {
-  margin-top: 4.4rem;
-  margin-bottom: 2rem;
+  padding: calc(var(--gap) * 1) calc(var(--gap) * 2);
   line-height: calc(0.8 / var(--font-body-scale));
 }
 
@@ -88,8 +87,8 @@
 }
 
 .article-template__content {
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+  padding: calc(var(--gap) * 1) calc(var(--gap) * 2);
+  max-width: 66rem;
 }
 
 .article-template__social-sharing {
@@ -171,5 +170,5 @@
 }
 
 .article-template__back:last-child {
-  margin-bottom: 3.2rem;
+  padding: calc(var(--gap) * 1) calc(var(--gap) * 2);
 }

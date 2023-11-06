@@ -33,7 +33,8 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--display);
   font-weight: normal;
   line-height: 1;
-  margin: calc(var(--base) * var(--scale) * 1) auto;
+  margin-top: calc(var(--base) * var(--scale) * 1);
+  margin-bottom: calc(var(--base) * var(--scale) * 1);
 }
 
 h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
@@ -41,7 +42,7 @@ h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
 }
 
 p {
-	/* line-height: var(--scale); */
+	line-height: 1.5;
   margin-top: 0;
   margin-bottom: var(--base);
 }
@@ -113,9 +114,13 @@ video {
 }
 
 .page-width {
-  padding: var(--gap);
+  /* padding: var(--gap); */
 }
 
   .page-width--narrow {
     max-width: 66rem;
   }
+
+.center {
+  text-align: center;
+}

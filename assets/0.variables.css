@@ -23,8 +23,8 @@
 }
 
 :root {
-  --base: 15px;
-  --scale: 2;
+  --base: 16px;
+  --scale: 1.875;
   --gap: calc(var(--base) * var(--scale));
 
   --display: "Catalogue", serif;

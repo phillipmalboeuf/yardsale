@@ -1,0 +1,266 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "c27f6dff-97ea-43bb-be77-f48ac13d90e2": {
+      "type": "image-banner",
+      "blocks": {
+        "template--21605512020279__c27f6dff-97ea-43bb-be77-f48ac13d90e2-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "P1 Poles",
+            "text_style": "subtitle"
+          }
+        },
+        "template--21605512020279__c27f6dff-97ea-43bb-be77-f48ac13d90e2-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Ski poles that don't suck",
+            "heading_size": "h2"
+          }
+        }
+      },
+      "block_order": [
+        "template--21605512020279__c27f6dff-97ea-43bb-be77-f48ac13d90e2-text-1",
+        "template--21605512020279__c27f6dff-97ea-43bb-be77-f48ac13d90e2-heading-1"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/fece5373fbf65859180a3eea01ab4757.jpg",
+        "image_overlay_opacity": 30,
+        "image_height": "small",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "inverse",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "12a0edfd-3555-4e0b-94a3-311d552c7304": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--21605512020279__12a0edfd-3555-4e0b-94a3-311d552c7304-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Turn heads in the lift line",
+            "heading_size": "h2"
+          }
+        },
+        "template--21605512020279__12a0edfd-3555-4e0b-94a3-311d552c7304-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Colors you can mix and match and magnets to make walking or freeing up a hand even easier. Capture iconic moments with a GoPro® mount built right into the handle.<\/p><p>Oh and if you break it or bend it, don’t sweat. They’re covered by our Yardsale Guarantee.<\/p>",
+            "text_style": "subtitle"
+          }
+        },
+        "template--21605512020279__12a0edfd-3555-4e0b-94a3-311d552c7304-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Customize your pair",
+            "button_link": "shopify:\/\/collections\/p1-poles",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "template--21605512020279__12a0edfd-3555-4e0b-94a3-311d552c7304-heading-1",
+        "template--21605512020279__12a0edfd-3555-4e0b-94a3-311d552c7304-text-1",
+        "template--21605512020279__12a0edfd-3555-4e0b-94a3-311d552c7304-button-1"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/70f1a0ece7cdd5bfc9869a90e3367ce1.jpg",
+        "height": "small",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "center",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-2",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "49d2d5c9-df31-47d3-88ba-bddb5ea89386": {
+      "type": "multirow",
+      "blocks": {
+        "template--21605512020279__49d2d5c9-df31-47d3-88ba-bddb5ea89386-row-1": {
+          "type": "row",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/e8eff9f8f749b34066d3ade695677922.jpg",
+            "caption": "",
+            "heading": "Magnetic poles?!",
+            "text": "<p>Yeah, magnetic poles.<\/p><p>No more dropping your poles in the parking lot or when getting on and off the chairlift.<\/p><p>Our proprietary magnetic system in the handles and baskets make carrying your gear, answering a call, or just freeing up a hand a breeze. Just click the poles together and go.<\/p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "template--21605512020279__49d2d5c9-df31-47d3-88ba-bddb5ea89386-row-2": {
+          "type": "row",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/60fb1476e2b478630ac34a28ae233cf7.jpg",
+            "caption": "",
+            "heading": "Open sesame",
+            "text": "<p>No more struggling to fit your gloved hands inside your straps while the wind is blowing and your friends already started skiing down the run.<\/p><p>Our special 3D strap knitting process helps keep them open so you can focus on skiing.<\/p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "template--21605512020279__49d2d5c9-df31-47d3-88ba-bddb5ea89386-row-3": {
+          "type": "row",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/1fba71ad631faf4c6fc8a11da40598f8.png",
+            "caption": "",
+            "heading": "Mix-and-match",
+            "text": "<p>Never lose your poles in a sea of black and gray gear again. With our fully modular system, you can choose between our eye-catching monochrome poles, or pick different colors for your handles, baskets, straps, and poles.<\/p><p>If you want to go wild, you can even make your right pole totally different from your left.<\/p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "8589cbe4-489a-4f57-8b09-86bceb651b46": {
+          "type": "row",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/691091f1bd93d8b12543a735da735bee.jpg",
+            "caption": "",
+            "heading": "Built and tested by skiers",
+            "text": "<p>We want your poles to last a lifetime. Each component has been rigorously tested in our lab against industry standards.<\/p><p>From sub-zero freezers to blazing hot ovens, to pull tests, abrasion tests, and bend tests, we’re confident you’ll ski them for seasons to come.<\/p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "f40ca9d9-1cd1-43c0-95cb-2ab823853be1": {
+          "type": "row",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/87369f8cad2d6bcd0705bb707bd245ce.jpg",
+            "caption": "",
+            "heading": "Quality you can feel",
+            "text": "<p>Each P1 Pole is hand painted and hand assembled by experts who have been making ski poles for more than 40 years.<\/p><p>From the light and durable 7-series grade aluminum shafts, to stainless steel fasteners, 3D-knit straps, and premium ice crushing tips, you’ll see the difference in every pole plant and hop turn.<\/p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--21605512020279__49d2d5c9-df31-47d3-88ba-bddb5ea89386-row-1",
+        "template--21605512020279__49d2d5c9-df31-47d3-88ba-bddb5ea89386-row-2",
+        "template--21605512020279__49d2d5c9-df31-47d3-88ba-bddb5ea89386-row-3",
+        "8589cbe4-489a-4f57-8b09-86bceb651b46",
+        "f40ca9d9-1cd1-43c0-95cb-2ab823853be1"
+      ],
+      "settings": {
+        "image_height": "small",
+        "desktop_image_width": "medium",
+        "heading_size": "h3",
+        "text_style": "body",
+        "button_style": "secondary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "image_layout": "alternate-right",
+        "section_color_scheme": "",
+        "row_color_scheme": "background-2",
+        "mobile_content_alignment": "left"
+      }
+    },
+    "5126d8b3-abca-4124-a5b1-d5d29258396e": {
+      "type": "rich-text",
+      "blocks": {
+        "template--21605512020279__5126d8b3-abca-4124-a5b1-d5d29258396e-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Break it or bend it, <strong>we dare you<\/strong>",
+            "heading_size": "h1"
+          }
+        },
+        "template--21605512020279__5126d8b3-abca-4124-a5b1-d5d29258396e-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Yard sales happen. Unlike most poles, if you break or bend them, we can replace just the center segment. No need to worry about buying a whole new pair. Just tell us the story behind how you broke it and we’ll send you a new one.<\/p><p>We think they’re the last poles you’ll ever buy.<\/p>",
+            "text_size": "small"
+          }
+        },
+        "template--21605512020279__5126d8b3-abca-4124-a5b1-d5d29258396e-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "The Yardsale Guarantee →",
+            "button_link": "",
+            "button_style_secondary": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--21605512020279__5126d8b3-abca-4124-a5b1-d5d29258396e-heading-1",
+        "template--21605512020279__5126d8b3-abca-4124-a5b1-d5d29258396e-text-1",
+        "template--21605512020279__5126d8b3-abca-4124-a5b1-d5d29258396e-button-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": ""
+      }
+    },
+    "a56c3583-d295-4e53-a8e3-64a3a21ae2a5": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--21605512020279__a56c3583-d295-4e53-a8e3-64a3a21ae2a5-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Yardsale P1 Poles",
+            "heading_size": "h2"
+          }
+        },
+        "template--21605512020279__a56c3583-d295-4e53-a8e3-64a3a21ae2a5-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Beatuifully designed for effortless ski days<\/p>",
+            "text_style": "subtitle"
+          }
+        },
+        "template--21605512020279__a56c3583-d295-4e53-a8e3-64a3a21ae2a5-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "BUILD your poleS",
+            "button_link": "shopify:\/\/collections\/p1-poles",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "template--21605512020279__a56c3583-d295-4e53-a8e3-64a3a21ae2a5-heading-1",
+        "template--21605512020279__a56c3583-d295-4e53-a8e3-64a3a21ae2a5-text-1",
+        "template--21605512020279__a56c3583-d295-4e53-a8e3-64a3a21ae2a5-button-1"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/28c4e326ae59c5b0fc8ce412263029ae.jpg",
+        "height": "small",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-2",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "c27f6dff-97ea-43bb-be77-f48ac13d90e2",
+    "12a0edfd-3555-4e0b-94a3-311d552c7304",
+    "49d2d5c9-df31-47d3-88ba-bddb5ea89386",
+    "5126d8b3-abca-4124-a5b1-d5d29258396e",
+    "a56c3583-d295-4e53-a8e3-64a3a21ae2a5"
+  ]
+}

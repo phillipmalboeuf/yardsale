@@ -2,29 +2,13 @@
   "name": "t:sections.header.name",
   "type": "header",
   "sections": {
-    "announcement-bar": {
-      "type": "announcement-bar",
-      "blocks": {
-        "announcement-bar-0": {
-          "type": "announcement",
-          "settings": {
-            "text": "Welcome to our store",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "announcement-bar-0"
-      ],
-      "settings": {
-      }
-    },
     "header": {
       "type": "header",
       "settings": {
         "logo_position": "middle-left",
         "menu": "main-menu",
         "color_scheme": "background-1",
+        "menu_color_scheme": "",
         "enable_country_selector": true,
         "enable_language_selector": true,
         "mobile_logo_position": "center"
@@ -32,7 +16,6 @@
     }
   },
   "order": [
-    "announcement-bar",
     "header"
   ]
 }

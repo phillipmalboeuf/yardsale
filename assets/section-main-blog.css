@@ -1,5 +1,5 @@
 .main-blog {
-  padding: calc(var(--gap) * 2);
+  padding: calc(var(--gap) * 2) calc(var(--gap) * 2);
 }
 
 .blog-articles {

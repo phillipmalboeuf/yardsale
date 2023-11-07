@@ -1,6 +1,6 @@
 .header,
 .announcement-bar {
-  position: fixed;
+  position: sticky;
   z-index: 40;
   top: 0;
   left: 0;
@@ -13,6 +13,10 @@
   background: linear-gradient(rgba(var(--color-background), 0.666), rgba(var(--color-background), 0)); */
   transition: color 333ms, background 333ms;
   padding: calc(var(--gap) / var(--scale));
+}
+
+.header[data-header] {
+  position: fixed;
 }
 
 .announcement-bar {

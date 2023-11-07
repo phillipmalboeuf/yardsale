@@ -99,33 +99,32 @@
     "ef1a4d0c-4f55-49b8-ab98-a1397768f34b": {
       "type": "image-with-text",
       "blocks": {
-        "template--21605508841783__ef1a4d0c-4f55-49b8-ab98-a1397768f34b-text-1": {
-          "type": "text",
-          "settings": {
-            "text": "<p>We believe good design can be the difference between a good day and a great day. At Yardsale, we obsess over the smallest of details to ensure your ski day (and weekend) (and season) are as effortless as possible.<\/p>",
-            "text_style": "body"
-          }
-        },
         "template--21605508841783__ef1a4d0c-4f55-49b8-ab98-a1397768f34b-heading-1": {
           "type": "heading",
           "settings": {
             "heading": "Your gear should <strong>simplify skiing<\/strong>, not complicate it",
             "heading_size": "h2"
           }
+        },
+        "template--21605508841783__ef1a4d0c-4f55-49b8-ab98-a1397768f34b-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We believe good design can be the difference between a good day and a great day. At Yardsale, we obsess over the smallest of details to ensure your ski day (and weekend) (and season) are as effortless as possible.<\/p>",
+            "text_style": "body"
+          }
         }
       },
       "block_order": [
-        "template--21605508841783__ef1a4d0c-4f55-49b8-ab98-a1397768f34b-text-1",
-        "template--21605508841783__ef1a4d0c-4f55-49b8-ab98-a1397768f34b-heading-1"
+        "template--21605508841783__ef1a4d0c-4f55-49b8-ab98-a1397768f34b-heading-1",
+        "template--21605508841783__ef1a4d0c-4f55-49b8-ab98-a1397768f34b-text-1"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/70f1a0ece7cdd5bfc9869a90e3367ce1.jpg",
         "height": "medium",
         "desktop_image_width": "medium",
-        "layout": "text_first",
-        "desktop_content_position": "top",
+        "layout": "image_second",
+        "desktop_content_position": "middle",
         "desktop_content_alignment": "center",
-        "content_layout": "no-overlap",
         "color_scheme": "",
         "image_behavior": "none",
         "mobile_content_alignment": "left",

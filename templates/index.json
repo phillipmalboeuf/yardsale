@@ -7,25 +7,17 @@
           "type": "heading",
           "settings": {
             "heading": "Ski poles you’ll <strong>actually<\/strong> want to brag about",
-            "heading_size": "h2"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template.",
-            "text_style": "body"
+            "heading_size": "h1"
           }
         }
       },
       "block_order": [
-        "heading",
-        "text"
+        "heading"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/Screenshot_2023-10-15_at_6.35.03_PM.png",
         "image_overlay_opacity": 0,
-        "image_height": "small",
+        "image_height": "medium",
         "desktop_content_position": "bottom-left",
         "show_text_box": false,
         "desktop_content_alignment": "left",

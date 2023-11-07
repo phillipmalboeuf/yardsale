@@ -24,7 +24,20 @@
   endfor
 -%}
 
-<header class="header header--{{ section.settings.logo_position }} header--mobile-{{ section.settings.mobile_logo_position }} color-{{ section.settings.color_scheme }}">
+{% comment %}
+   {% for scheme in settings.color_schemes %}
+    {%- assign scroll_scheme = scheme -%}
+  {% endfor %}
+{% endcomment %}
+
+{%- assign scroll_scheme = settings.color_schemes.inverse -%}
+
+<header
+  id="header"
+  data-header='{ "foreground": "{{ scroll_scheme.settings.text.red }},{{ scroll_scheme.settings.text.green }},{{ scroll_scheme.settings.text.blue }}", "background": "{{ scroll_scheme.settings.background.red }},{{ scroll_scheme.settings.background.green }},{{ scroll_scheme.settings.background.blue }}" }'
+  style="color: rgb({{ scroll_scheme.settings.text.red }},{{ scroll_scheme.settings.text.green }},{{ scroll_scheme.settings.text.blue }}); background: linear-gradient(rgba({{ scroll_scheme.settings.background.red }},{{ scroll_scheme.settings.background.green }},{{ scroll_scheme.settings.background.blue }}, 0.666), rgba({{ scroll_scheme.settings.background.red }},{{ scroll_scheme.settings.background.green }},{{ scroll_scheme.settings.background.blue }}, 0))"
+  class="header header--{{ section.settings.logo_position }} header--mobile-{{ section.settings.mobile_logo_position }} color-{{ section.settings.color_scheme }}"
+>
   <nav>
     {%- for link in section.settings.menu.links -%}
       {%- if link.links != blank -%}
@@ -384,6 +397,12 @@
       "id": "color_scheme",
       "label": "t:sections.all.colors.label",
       "default": "background-1"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme_before_scroll",
+      "label": "Menu color before scroll",
+      "default": "inverse"
     },
     {
       "type": "color_scheme",

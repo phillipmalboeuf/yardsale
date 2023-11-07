@@ -3,8 +3,6 @@
     "main": {
       "type": "main-page",
       "settings": {
-        "padding_top": 28,
-        "padding_bottom": 28
       }
     },
     "c27f6dff-97ea-43bb-be77-f48ac13d90e2": {
@@ -32,7 +30,7 @@
       "settings": {
         "image": "shopify:\/\/shop_images\/fece5373fbf65859180a3eea01ab4757.jpg",
         "image_overlay_opacity": 30,
-        "image_height": "small",
+        "image_height": "medium",
         "desktop_content_position": "middle-center",
         "show_text_box": true,
         "desktop_content_alignment": "center",

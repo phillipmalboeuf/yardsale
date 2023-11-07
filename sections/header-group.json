@@ -8,6 +8,7 @@
         "logo_position": "middle-left",
         "menu": "main-menu",
         "color_scheme": "background-1",
+        "color_scheme_before_scroll": "",
         "menu_color_scheme": "",
         "enable_country_selector": true,
         "enable_language_selector": true,

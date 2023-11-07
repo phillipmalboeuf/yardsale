@@ -1,6 +1,7 @@
 .header,
 .announcement-bar {
-  position: sticky;
+  position: fixed;
+  z-index: 40;
   top: 0;
   left: 0;
   width: 100vw;
@@ -8,8 +9,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: rgb(var(--color-foreground));
-  background: rgb(var(--color-background));
+  /* color: rgb(var(--color-foreground));
+  background: linear-gradient(rgba(var(--color-background), 0.666), rgba(var(--color-background), 0)); */
+  transition: color 333ms, background 333ms;
   padding: calc(var(--gap) / var(--scale));
 }
 
@@ -21,7 +23,10 @@
   .header nav {
     flex: 1;
     display: flex;
-    gap: calc(var(--gap));
+  }
+
+  .header nav a {
+    padding: calc(var(--gap) / 2);
   }
 
   .header nav:last-child {

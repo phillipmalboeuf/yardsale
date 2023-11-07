@@ -22,6 +22,22 @@ if (builder) {
   })
 }
 
+const header = document.getElementById("header");
+if (header) {
+  if (header.hasAttribute('data-header')) {
+    const attributes = JSON.parse(header.getAttribute('data-header'))
+
+    window.addEventListener('scroll', (e) => {
+      if (header.hasAttribute('style') && window.scrollY > 0) {
+        header.removeAttribute('style')
+      } else if (!header.hasAttribute('style') && window.scrollY <= 0) {
+        header.style.color = `rgb(${attributes.foreground})`
+        header.style.background = `linear-gradient(rgba(${attributes.background}, 0.666), rgba(${attributes.background}, 0))`
+      }
+    })
+  }
+}
+
 const variants = {
   'Gondola': 'red',
   'Powder': 'sand',

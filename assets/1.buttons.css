@@ -1,5 +1,6 @@
 .button,
 button {
+  cursor: pointer;
   display: flex;
   padding: calc(var(--base)) calc(var(--base) * var(--scale));
   justify-content: center;

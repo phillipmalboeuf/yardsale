@@ -85,8 +85,8 @@ input[type='radio']:checked {
 
 input[type='radio'].input--color {
   position: relative;
-  width: 8em;
-  height: 8em;
+  width: 6.66em;
+  height: 6.66em;
   border-radius: 0.666em;
   border-color: transparent;
   background-repeat: no-repeat;

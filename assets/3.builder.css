@@ -12,8 +12,36 @@
   align-self: flex-start;
 }
 
+.builder__info__forms {
+  display: flex;
+  row-gap: calc(var(--gap) / 2);
+  flex-wrap: wrap;
+}
+
+.builder__info__forms > input[type='radio'] {
+  display: none;
+}
+
+.builder__info__forms > div {
+  width: 100%;
+  order: 99;
+}
+
+  .builder__info__forms > input[type='radio']:checked + label {
+    color: rgb(var(--color-background));
+    background-color: rgb(var(--color-foreground));
+  }
+
+  .builder__info__forms > input[type='radio']:not(:checked) + label + div {
+    display: none;
+  }
+
+  .builder__info__forms details {
+    width: 100%;
+  }
+
 .builder__form {
-  margin: var(--gap) 0;
+  margin: 0 0 var(--gap);
   display: flex;
   flex-wrap: wrap;
   gap: calc(var(--gap) / 4);

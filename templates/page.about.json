@@ -110,7 +110,7 @@
           "type": "text",
           "settings": {
             "text": "<p>We believe good design can be the difference between a good day and a great day. At Yardsale, we obsess over the smallest of details to ensure your ski day (and weekend) (and season) are as effortless as possible.<\/p>",
-            "text_style": "body"
+            "text_style": "subtitle"
           }
         }
       },

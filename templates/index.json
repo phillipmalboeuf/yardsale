@@ -82,7 +82,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/ae26248bfd173cf9debbd247bddc92f5.jpg",
             "caption": "",
-            "heading": "They’re magnetic",
+            "heading": "Magnetic poles",
             "text": "",
             "button_label": "",
             "button_link": ""
@@ -91,7 +91,7 @@
         "template--21549409567031__742133b8-6152-4597-a606-78a079616c87-row-2": {
           "type": "row",
           "settings": {
-            "image": "shopify:\/\/shop_images\/ae26248bfd173cf9debbd247bddc92f5.jpg",
+            "image": "shopify:\/\/shop_images\/60fb1476e2b478630ac34a28ae233cf7.jpg",
             "caption": "",
             "heading": "Straps that stay open",
             "text": "",
@@ -102,9 +102,9 @@
         "template--21549409567031__742133b8-6152-4597-a606-78a079616c87-row-3": {
           "type": "row",
           "settings": {
-            "image": "shopify:\/\/shop_images\/ae26248bfd173cf9debbd247bddc92f5.jpg",
+            "image": "shopify:\/\/shop_images\/6ca08e4c8f2da9449fef9d2ebad5e9dd.png",
             "caption": "",
-            "heading": "Capture iconic moments",
+            "heading": "GoPro® mount",
             "text": "",
             "button_label": "",
             "button_link": ""
@@ -113,6 +113,7 @@
         "b426a280-0b91-4e03-bf29-8ffd9ea228d1": {
           "type": "row",
           "settings": {
+            "image": "shopify:\/\/shop_images\/e4c1eff08866d3ce5975f8c0f3c21c5b.jpg",
             "caption": "",
             "heading": "Mix-and-match colors",
             "text": "",
@@ -141,6 +142,56 @@
         "mobile_content_alignment": "left"
       }
     },
+    "cda9a249-bd53-4cc6-af49-81261315d9bd": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--21549409567031__cda9a249-bd53-4cc6-af49-81261315d9bd-column-1": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "<h6>Sarah S., Los Angeles<\/h6><p>“These are UNREAL. Why has nobody thought of this before?” <\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--21549409567031__cda9a249-bd53-4cc6-af49-81261315d9bd-column-2": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "<h6>Manny G., New York City<\/h6><p>“Nothing about poles has ever been sexy until Yardsale.”<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--21549409567031__cda9a249-bd53-4cc6-af49-81261315d9bd-column-3": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "<h6>Nick L., Seattle <\/h6><p>“I’m obsessed with the design. Perfect blend of technical, modern, but also classic.”<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--21549409567031__cda9a249-bd53-4cc6-af49-81261315d9bd-column-1",
+        "template--21549409567031__cda9a249-bd53-4cc6-af49-81261315d9bd-column-2",
+        "template--21549409567031__cda9a249-bd53-4cc6-af49-81261315d9bd-column-3"
+      ],
+      "settings": {
+        "title": "Skiers love Yardsale",
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "1"
+      }
+    },
     "a5a48154-0536-49fa-846c-5fb78758f557": {
       "type": "image-with-text",
       "blocks": {
@@ -165,13 +216,13 @@
         "template--21549409567031__a5a48154-0536-49fa-846c-5fb78758f557-button-1"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Screenshot_2023-10-15_at_6.35.03_PM.png",
+        "image": "shopify:\/\/shop_images\/ec841c40ee621ff08d7b7aabb5ed2520-2.jpg",
         "height": "small",
         "desktop_image_width": "medium",
         "layout": "text_left",
         "desktop_content_position": "top",
         "desktop_content_alignment": "left",
-        "color_scheme": "inverse",
+        "color_scheme": "background-2",
         "image_behavior": "none",
         "mobile_content_alignment": "left",
         "padding_top": 36,
@@ -184,6 +235,7 @@
     "rich_text",
     "video",
     "742133b8-6152-4597-a606-78a079616c87",
+    "cda9a249-bd53-4cc6-af49-81261315d9bd",
     "a5a48154-0536-49fa-846c-5fb78758f557"
   ]
 }

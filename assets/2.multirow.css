@@ -1,8 +1,16 @@
 .multirow {
   position: relative;
   padding: 0 calc(var(--gap) * 4);
-  margin: calc(var(--gap) * 4) 0;
+  margin: calc(var(--gap) * 4) auto;
+  max-width: calc(950px + (var(--gap) * 8));
 }
+
+  .multirow--alternate-right .image-with-text,
+  .multirow--alternate-left .image-with-text {
+    border-radius: var(--base);
+    overflow: hidden;
+    margin-bottom: var(--gap);
+  }
 
 .multirow .float-right .image-with-text__media-item {
   position: static;
@@ -22,12 +30,24 @@
   top: 50%;
   left: 45%;
   min-height: auto;
-  width: 25vw;
+  width: 20vw;
   height: 25vw;
 
   opacity: 0.1;
   transition: opacity 666ms;
   transform: translate(50%, -50%);
+}
+
+.multirow .float-right .image-with-text__media.image-with-text__media--medium {
+  height: 33vw;
+}
+
+.multirow .float-right .image-with-text__media.image-with-text__media--large {
+  height: 50vw;
+}
+
+.multirow .float-right .image-with-text__media img {
+  border-radius: var(--base);
 }
 
 .multirow .float-right:hover .image-with-text__media {

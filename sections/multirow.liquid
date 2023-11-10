@@ -29,7 +29,7 @@
   endunless
 -%}
 
-<div class="multirow color-{{ section.settings.section_color_scheme }}">
+<div class="multirow multirow--{{ section.settings.image_layout }} color-{{ section.settings.section_color_scheme }}">
   <div class="multirow__inner">
     {%- for block in section.blocks -%}
       <div

@@ -86,6 +86,9 @@
       </div>
     </noscript>
     <deferred-media
+      {% if section.settings.enable_video_looping %}
+        autoplay
+      {% endif %}
       class="video-section__media deferred-media no-js-hidden gradient global-media-settings{% if section.settings.full_width %} global-media-settings--full-width{% endif %}{% if fix_ratio %} media-fit-cover{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
       data-media-id="{{ video_id }}"
       {% if poster != null %}
@@ -137,15 +140,17 @@
             ></iframe>
           {%- endif -%}
         {%- else -%}
-          {{
-            section.settings.video
-            | video_tag:
-              image_size: '1100x',
-              autoplay: true,
-              loop: section.settings.enable_video_looping,
-              controls: true,
-              muted: false
-          }}
+          {% if section.settings.enable_video_looping %}
+            {{
+              section.settings.video
+              | video_tag: image_size: '1100x', autoplay: true, loop: true, controls: false, muted: true
+            }}
+          {% else %}
+            {{
+              section.settings.video
+              | video_tag: image_size: '1100x', autoplay: true, loop: false, controls: true, muted: false
+            }}
+          {% endif %}
         {%- endif -%}
       </template>
     </deferred-media>

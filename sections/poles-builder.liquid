@@ -4,6 +4,10 @@
 <div class="builder builder--{{ section.settings.media_size }} builder--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} builder--mobile-{{ section.settings.mobile_thumbnails }} grid grid--2">
   <div class="builder__media">
     <epigraph-configurator-lite id="epigraphConfiguratorLite" experience-id="yardsale-ski" disable-default-ui hidden>
+      <img
+        slot="splash-screen-image"
+        style="display:none;"
+      >
       <span slot="splash-screen-text"></span>
     </epigraph-configurator-lite>
   </div>
@@ -19,7 +23,7 @@
       </div>
 
       <input type="radio" name="options" value="seperate" id="seperate">
-      <label class="button" for="seperate">Seperate</label>
+      <label class="button" for="seperate">Customize</label>
 
       <div class="builder__info__forms">
         <input type="radio" name="seperate" value="1st" id="1st" checked>

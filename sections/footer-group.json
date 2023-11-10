@@ -8,7 +8,7 @@
         "footer-0": {
           "type": "link_list",
           "settings": {
-            "color_scheme": "accent-1",
+            "color_scheme": "inverse",
             "heading": "Quick links",
             "menu": "footer",
             "text_size": "medium"
@@ -21,7 +21,7 @@
             "heading": "<h6>Newsletter Subscription<\/h6><h5>Subscribe and get 10% off<\/h5>",
             "label": "Enter your email to join our mailing list",
             "cta": "Sign up",
-            "tagline": "Serious designfor good times",
+            "tagline": "",
             "subtext": "<p>Share contact information, store details, and brand content with your customers.<\/p>"
           }
         }

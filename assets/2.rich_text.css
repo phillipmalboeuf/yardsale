@@ -16,7 +16,15 @@
   width: 100%;
 }
 
+@media screen and (max-width: 750px) {
+  .rich-text {
+    padding: calc(var(--gap) * 1);
+  }
+}
+
 @media screen and (min-width: 750px) {
+  
+
   .rich-text__wrapper {
     width: 100%;
   }

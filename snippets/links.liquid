@@ -1,0 +1,38 @@
+{%- for link in links -%}
+  {%- if link.links != blank -%}
+    <details>
+      <summary>
+        <a
+          href="{{ link.url }}"
+          {% if link.current %}
+            aria-current="page"
+          {% endif %}
+        >
+          {{- link.title | escape -}}
+        </a>
+      </summary>
+
+      <nav>
+        {%- for childlink in link.links -%}
+          <a
+            href="{{ childlink.url }}"
+            {% if childlink.current %}
+              aria-current="page"
+            {% endif %}
+          >
+            {{- childlink.title | escape -}}
+          </a>
+        {%- endfor -%}
+      </nav>
+    </details>
+  {%- else -%}
+    <a
+      href="{{ link.url }}"
+      {% if link.current %}
+        aria-current="page"
+      {% endif %}
+    >
+      {{- link.title | escape -}}
+    </a>
+  {%- endif -%}
+{%- endfor -%}

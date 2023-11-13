@@ -22,12 +22,18 @@ input:focus ~ button:hover {
 .field {
   display: inline-block;
   position: relative;
-  max-width: 350px;
+  /* max-width: 350px; */
   width: 100%;
 }
 
+@media screen and (max-width: 749px) {
+  .field {
+    font-size: 0.88em;
+  }
+}
+
 .field input {
-  max-width: 350px;
+  /* max-width: 350px; */
   width: 100%;
 }
 
@@ -46,8 +52,12 @@ input:focus ~ button:hover {
 }
 
 .field button {
+  padding: calc(var(--base) / 2) var(--base);
+}
+
+.field button {
   left: auto;
-  right: calc(var(--base));
+  right: calc(var(--base) / 2);
 }
 
 fieldset {
@@ -85,19 +95,19 @@ input[type='radio']:checked {
 
 input[type='radio'].input--color {
   position: relative;
-  width: 6.66em;
-  height: 6.66em;
+  width: 2em;
+  height: 2em;
   border-radius: 0.666em;
   border-color: transparent;
-  background-repeat: no-repeat;
-  background-position: -100%;
+  /* background-repeat: no-repeat;
+  background-position: -100%; */
 }
 
 input[type='radio'].input--color:after {
-  content: attr(data-value);
-  position: absolute;
+  /* content: attr(data-value); */
+  /* position: absolute;
   left: 1em;
-  top: 1em;
+  top: 1em; */
 }
 
 input[type='radio'].input--color + label {
@@ -106,7 +116,7 @@ input[type='radio'].input--color + label {
 
 input[type='radio'].input--color:checked {
   border-color: rgb(var(--color-foreground));
-  background-position: 0.66em calc(100% - 0.66em);
+  /* background-position: 0.66em calc(100% - 0.66em); */
 }
 
 

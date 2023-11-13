@@ -44,3 +44,9 @@
   --glade: #69806D;
   --gondola: #D85443;
 }
+
+@media screen and (max-width: 749px) {
+  :root {
+    --scale: 1.75;
+  }
+}

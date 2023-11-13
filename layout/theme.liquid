@@ -144,5 +144,11 @@
     {% endcomment %}
 
     <script src="{{ 'script.js' | asset_url }}" defer="defer"></script>
+
+    {% comment %}
+       <script type="module">
+        import hotwiredTurbo from 'https://cdn.skypack.dev/@hotwired/turbo';
+      </script>
+    {% endcomment %}
   </body>
 </html>

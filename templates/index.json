@@ -74,6 +74,35 @@
         "padding_bottom": 0
       }
     },
+    "f2e8553e-391d-40b9-ba59-d5e82b8712b5": {
+      "type": "rich-text",
+      "blocks": {
+        "8009cc57-c88a-46e7-aa5f-3a800c149bc2": {
+          "type": "caption",
+          "settings": {
+            "caption": "Our flagship P1 Poles",
+            "text_style": "subtitle",
+            "text_size": "small"
+          }
+        },
+        "template--21549409567031__f2e8553e-391d-40b9-ba59-d5e82b8712b5-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Serious design for good times",
+            "heading_size": "h2"
+          }
+        }
+      },
+      "block_order": [
+        "8009cc57-c88a-46e7-aa5f-3a800c149bc2",
+        "template--21549409567031__f2e8553e-391d-40b9-ba59-d5e82b8712b5-heading-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": ""
+      }
+    },
     "742133b8-6152-4597-a606-78a079616c87": {
       "type": "multirow",
       "blocks": {
@@ -234,6 +263,7 @@
     "image_banner",
     "rich_text",
     "video",
+    "f2e8553e-391d-40b9-ba59-d5e82b8712b5",
     "742133b8-6152-4597-a606-78a079616c87",
     "cda9a249-bd53-4cc6-af49-81261315d9bd",
     "a5a48154-0536-49fa-846c-5fb78758f557"

@@ -15,10 +15,17 @@
             {{ block.settings.subtext }}
           </div>
         {%- when 'link_list' -%}
-          <nav>
+          <aside>
             <a href="{{ routes.root_url }}" class="footer__logo">
               {% render 'logo' %}
             </a>
+            {%- if block.settings.subtext != blank -%}
+              <small>
+                {{ block.settings.subtext }}
+              </small>
+            {%- endif -%}
+          </aside>
+          <nav>
             {%- if block.settings.menu != blank -%}
               <ul class="list--unstyled {{ block.settings.text_size }}">
                 {%- for link in block.settings.menu.links -%}
@@ -424,6 +431,12 @@
           "default": "footer",
           "label": "t:sections.footer.blocks.link_list.settings.menu.label",
           "info": "t:sections.footer.blocks.link_list.settings.menu.info"
+        },
+        {
+          "type": "richtext",
+          "id": "subtext",
+          "default": "<p>YARDSALE - A big fall in which a skier or snowboarder loses their skis, gloves, hat and poles across the piste, thus resembling a yard sale!</p>",
+          "label": "t:sections.footer.blocks.text.settings.subtext.label"
         },
         {
           "type": "select",

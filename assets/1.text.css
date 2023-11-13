@@ -18,7 +18,7 @@ h2,
   line-height: 1;
 
   @media (max-width: 888px) {
-    font-size: calc(var(--base) * var(--scale) * 1);
+    font-size: calc(var(--base) * var(--scale) * 1.5);
   }
 }
 

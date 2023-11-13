@@ -8,16 +8,32 @@ button {
   gap: calc(var(--base) / var(--scale) * 1.5);
   flex-shrink: 0;
 
-  text-transform: uppercase;
+  font-weight: bold;
+  /* text-transform: uppercase; */
 
   border-radius: 55px;
   background: rgba(var(--color-button), 0.10);
   backdrop-filter: blur(12px);
 }
 
+@media screen and (max-width: 749px) {
+  .button,
+  button {
+    padding: calc(var(--base)) calc(var(--base) * var(--scale));
+  }
+}
+
   .button--primary {
     color: rgb(var(--color-background));
     background-color: rgb(var(--color-foreground));
+  }
+
+  .button--underline {
+    background: transparent;
+    border-bottom: 1px solid;
+    font-weight: bold;
+    border-radius: 0;
+    padding: calc(var(--base)) calc(var(--base));
   }
 
   .button--full_width {

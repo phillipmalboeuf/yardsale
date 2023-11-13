@@ -14,3 +14,13 @@
   .grid--3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
+
+  @media screen and (max-width: 750px) {
+    .grid:not(.grid--gapless) {
+      gap: calc(var(--gap) / 2);
+    }
+
+    .grid--1-col-tablet-down {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+  }

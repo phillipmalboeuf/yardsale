@@ -45,18 +45,23 @@ const variants = {
   'Sunlight': 'yellow',
 }
 
-const classes = document.querySelectorAll("input[data-3d-class]");
+const classes = document.querySelectorAll("[data-3d-class]");
 if (classes) {
   classes.forEach(c => {
     c.addEventListener("click", () => {
       if (window.epigraph) {
         if (c.getAttribute("data-3d-class").startsWith('both')) {
           window.epigraph.api.makeProductClassIdActive(c.getAttribute("data-3d-class").replace('both', 'left'));
-          window.epigraph.api.switchVariantForProductClass(c.getAttribute("data-3d-class").replace('both', 'left'), variants[c.getAttribute("data-value")])
-          window.epigraph.api.switchVariantForProductClass(c.getAttribute("data-3d-class").replace('both', 'right'), variants[c.getAttribute("data-value")])
+
+          if (c.hasAttribute("data-value")) {
+            window.epigraph.api.switchVariantForProductClass(c.getAttribute("data-3d-class").replace('both', 'left'), variants[c.getAttribute("data-value")])
+            window.epigraph.api.switchVariantForProductClass(c.getAttribute("data-3d-class").replace('both', 'right'), variants[c.getAttribute("data-value")])
+          }
         } else {
           window.epigraph.api.makeProductClassIdActive(c.getAttribute("data-3d-class"));
-          window.epigraph.api.switchVariantForProductClass(c.getAttribute("data-3d-class"), variants[c.getAttribute("data-value")])
+          if (c.hasAttribute("data-value")) {
+            window.epigraph.api.switchVariantForProductClass(c.getAttribute("data-3d-class"), variants[c.getAttribute("data-value")])
+          }
         }
       }
     })

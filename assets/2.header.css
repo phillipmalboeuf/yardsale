@@ -29,10 +29,117 @@
     display: flex;
   }
 
-  .header nav a {
+  .header nav a:not(.button) {
     padding: calc(var(--gap) / 2);
   }
 
   .header nav:last-child {
     justify-content: flex-end;
+  }
+
+@media screen and (max-width: 749px) {
+.header,
+.announcement-bar {
+  padding: calc(var(--gap) / var(--scale) / 2);
+}
+
+
+  .header > nav:first-of-type {
+    display: none;
+  }
+
+  .header__logo svg {
+    width: 108px;
+    height: 46px;
+  }
+
+  .header nav a.button {
+    padding: calc(var(--base) / 1.5) var(--base);
+    font-size: 0.88em;
+  }
+}
+
+@media screen and (min-width: 749px) {
+  .header details {
+    display: none;
+  }
+}
+
+.header details {
+  
+}
+
+.header details summary {
+  margin-right: calc(var(--base) / 1.5);
+}
+
+.header details summary svg:nth-child(2) {
+  display: none;
+}
+.header details[open] summary svg:nth-child(1) {
+  display: none;
+}
+.header details[open] summary svg:nth-child(2) {
+  display: inline-block;
+}
+
+.header details summary::-webkit-details-marker,
+.header details summary::marker {
+  display: none;
+  content: "";
+}
+
+.header details[open] {
+  color: var(--white);
+}
+
+.header details[open] ~ *,
+.header details[open] summary {
+  color: var(--white);
+  position: relative;
+  z-index: 30;
+}
+
+@keyframes toggleIn {
+  0% {
+    /* opacity: 0; */
+    transform: translateX(-100%);
+  }
+  100% {
+    /* opacity: 1; */
+    transform: translateX(0px);
+  }
+}
+
+.header details nav {
+  position: fixed;
+  Z-index: 20;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  color: var(--white);
+  background: var(--black);
+
+  padding: calc(var(--gap) * 4) var(--gap) var(--gap);
+  flex-direction: column;
+  justify-content: space-around !important;
+}
+
+.header details[open] nav {
+  animation: toggleIn 333ms;
+}
+  
+  .header details nav section {
+    display: flex;
+    /* gap: calc(var(--base) / 4); */
+    flex-direction: column;
+  }
+
+  .header details nav section a {
+    padding: calc(var(--gap) / 4) !important;
+  }
+
+  .header details nav section.h2 {
+    font-family: var(--display);
   }

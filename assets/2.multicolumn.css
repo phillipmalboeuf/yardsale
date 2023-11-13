@@ -1,5 +1,5 @@
 .multicolumn {
-  padding: calc(var(--gap) * 2) 0;
+  padding: calc(var(--gap) * 3) 0;
 }
 
 .multicolumn .title {

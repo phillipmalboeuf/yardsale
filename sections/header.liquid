@@ -40,45 +40,36 @@
   {%- endunless -%}
   class="header header--{{ section.settings.logo_position }} header--mobile-{{ section.settings.mobile_logo_position }} color-{{ section.settings.color_scheme }}"
 >
-  <nav>
-    {%- for link in section.settings.menu.links -%}
-      {%- if link.links != blank -%}
-        <details>
-          <summary>
-            <a
-              href="{{ link.url }}"
-              {% if link.current %}
-                aria-current="page"
-              {% endif %}
-            >
-              {{- link.title | escape -}}
-            </a>
-          </summary>
+  <details>
+    <summary>
+      <svg width="30" height="22" viewBox="0 0 30 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 2.64429C0 2.092 0.447715 1.64429 1 1.64429H29C29.5523 1.64429 30 2.092 30 2.64429C30 3.19657 29.5523 3.64429 29 3.64429H1C0.447715 3.64429 0 3.19657 0 2.64429ZM0 10.6443C0 10.092 0.447715 9.64429 1 9.64429H29C29.5523 9.64429 30 10.092 30 10.6443C30 11.1966 29.5523 11.6443 29 11.6443H1C0.447715 11.6443 0 11.1966 0 10.6443ZM1 17.6443C0.447715 17.6443 0 18.092 0 18.6443C0 19.1966 0.447715 19.6443 1 19.6443H29C29.5523 19.6443 30 19.1966 30 18.6443C30 18.092 29.5523 17.6443 29 17.6443H1Z" fill="currentColor"/>
+      </svg>
+      <svg width="30" height="22" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M11.0533 14.1004L19.5303 22.5774C19.8129 22.8504 20.1914 23.0014 20.5843 22.998C20.9772 22.9946 21.3531 22.837 21.6309 22.5592C21.9087 22.2813 22.0663 21.9055 22.0697 21.5126C22.0732 21.1197 21.9221 20.7412 21.6492 20.4585L13.1722 11.9816L21.6492 3.5046C21.9221 3.22198 22.0732 2.84346 22.0697 2.45056C22.0663 2.05766 21.9087 1.68182 21.6309 1.40399C21.3531 1.12615 20.9772 0.968559 20.5843 0.965145C20.1914 0.96173 19.8129 1.11277 19.5303 1.38573L11.0533 9.86271L2.57634 1.38573C2.29245 1.11952 1.91612 0.974195 1.52699 0.980514C1.13786 0.986832 0.766449 1.1443 0.491352 1.41959C0.216255 1.69488 0.0590523 2.0664 0.0530088 2.45554C0.0469652 2.84468 0.192554 3.2209 0.45897 3.5046L8.93444 11.9816L0.457472 20.4585C0.31435 20.5968 0.200192 20.7621 0.121658 20.945C0.0431234 21.1278 0.00178556 21.3244 5.65787e-05 21.5234C-0.00167241 21.7223 0.0362417 21.9197 0.111587 22.1038C0.186933 22.288 0.2982 22.4553 0.438898 22.596C0.579596 22.7367 0.746905 22.848 0.931065 22.9233C1.11522 22.9986 1.31254 23.0366 1.51151 23.0348C1.71048 23.0331 1.90711 22.9918 2.08994 22.9132C2.27276 22.8347 2.43811 22.7205 2.57634 22.5774L11.0533 14.1004Z" fill="currentColor"/>
+      </svg>
+    </summary>
 
-          <nav>
-            {%- for childlink in link.links -%}
-              <a
-                href="{{ childlink.url }}"
-                {% if childlink.current %}
-                  aria-current="page"
-                {% endif %}
-              >
-                {{- childlink.title | escape -}}
-              </a>
-            {%- endfor -%}
-          </nav>
-        </details>
-      {%- else -%}
+    <nav>
+      <section class="h2">
         <a
-          href="{{ link.url }}"
+          href="/"
           {% if link.current %}
             aria-current="page"
           {% endif %}
         >
-          {{- link.title | escape -}}
+          Home
         </a>
-      {%- endif -%}
-    {%- endfor -%}
+        {% render 'links', links: section.settings.menu.links %}
+      </section>
+      <section class="h4">
+        {% render 'links', links: linklists.footer.links %}
+      </section>
+      <small>© 2023 Yardsale. Terms and Conditions</small>
+    </nav>
+  </details>
+  <nav>
+    {% render 'links', links: section.settings.menu.links %}
   </nav>
 
   <a href="{{ routes.root_url }}" class="header__logo">
@@ -86,8 +77,8 @@
   </a>
 
   <nav>
-    <a href="/cart/clear?return_to=/collections/p1-poles" class="button header__button">
-      Build your pole
+    <a href="/cart/clear?return_to=/collections/p1-poles" class="button uppercase header__button">
+      Build your poles
       {%- render 'icon-ski' -%}
     </a>
     {%- if cart != empty -%}

@@ -29,8 +29,14 @@
     display: flex;
   }
 
-  .header nav a:not(.button) {
+  .header > nav a:not(.button) {
+    font-weight: bold;
+    text-transform: uppercase;
     padding: calc(var(--gap) / 2);
+  }
+
+  .header a[aria-current] {
+    text-decoration: underline;
   }
 
   .header nav:last-child {

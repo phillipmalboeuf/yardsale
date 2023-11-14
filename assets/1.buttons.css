@@ -14,7 +14,15 @@ button {
   border-radius: 55px;
   background: rgba(var(--color-button), 0.10);
   backdrop-filter: blur(12px);
+  border: 1px solid transparent;
 }
+
+  .button:hover,
+  button:hover {
+    text-decoration: none;
+    color: rgb(var(--color-background));
+    background: rgba(var(--color-foreground), 0.9);
+  }
 
 @media screen and (max-width: 749px) {
   .button,
@@ -28,8 +36,15 @@ button {
     background-color: rgb(var(--color-foreground));
   }
 
+  .button.button--primary:hover,
+  button.button--primary:hover {
+    /* color: rgb(var(--color-foreground)); */
+    background: rgba(var(--color-foreground), 0.75);
+  }
+
   .button--underline {
-    background: transparent;
+    color: currentColor !important;
+    background: transparent !important;
     border-bottom: 1px solid;
     font-weight: bold;
     border-radius: 0;

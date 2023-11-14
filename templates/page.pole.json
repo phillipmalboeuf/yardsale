@@ -78,7 +78,7 @@
         "layout": "image_second",
         "desktop_content_position": "top",
         "desktop_content_alignment": "center",
-        "color_scheme": "background-2",
+        "color_scheme": "background-1",
         "image_behavior": "none",
         "mobile_content_alignment": "left",
         "padding_top": 36,
@@ -225,7 +225,7 @@
         "template--21605512020279__a56c3583-d295-4e53-a8e3-64a3a21ae2a5-button-1": {
           "type": "button",
           "settings": {
-            "button_label": "BUILD your poleS",
+            "button_label": "BUILD YOUR POLES",
             "button_link": "shopify:\/\/collections\/p1-poles",
             "button_style_secondary": false
           }

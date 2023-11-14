@@ -8,6 +8,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  cursor: url("/assets/cursor.svg") 18 18, auto !important;
 }
 
 html {
@@ -54,6 +55,7 @@ a {
 
 a:hover {
 	text-decoration: underline;
+  cursor: url("/assets/cursor_black.svg") 18 18, auto;
 }
 
 p > a {
@@ -89,7 +91,7 @@ button {
 
 button:focus,
 button:hover {
-  
+  cursor: url("/assets/cursor_black.svg") 18 18, auto;
 }
 
 button:focus:not(:focus-visible),

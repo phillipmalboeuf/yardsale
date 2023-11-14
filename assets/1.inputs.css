@@ -71,6 +71,7 @@ input[type='radio'] {
   border-radius: 50%;
   background-color: transparent;
   cursor: pointer;
+  vertical-align: text-bottom;
 
   display: inline-block;
   flex-shrink: 0;

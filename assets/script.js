@@ -68,6 +68,19 @@ if (classes) {
   })
 }
 
+const floats = document.querySelectorAll("[data-float-right]");
+if (floats?.length) {
+  floats[0].classList.add("float--active")
+  floats.forEach(float => {
+    float.addEventListener("mouseenter", () => {
+      floats.forEach(f => {
+        f.classList.remove("float--active")
+      })
+      float.classList.add("float--active")
+    })
+  })
+}
+
 
 class DeferredMedia extends HTMLElement {
   constructor() {

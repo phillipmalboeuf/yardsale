@@ -27,7 +27,8 @@
   cursor: pointer;
 }
 
-.multirow .float-right:hover .image-with-text__text-item {
+.multirow .float-right:hover .image-with-text__text-item,
+.multirow .float-right.float--active .image-with-text__text-item {
   text-decoration: underline;
 }
 
@@ -53,7 +54,8 @@
   height: 50vw;
 }
 
-.multirow .float-right:hover .image-with-text__media {
+.multirow .float-right:hover .image-with-text__media,
+.multirow .float-right.float--active .image-with-text__media {
   z-index: 1;
   opacity: 1;
 }

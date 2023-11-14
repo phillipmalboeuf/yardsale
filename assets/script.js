@@ -45,13 +45,30 @@ const variants = {
   'Sunlight': 'yellow',
 }
 
+
 const classes = document.querySelectorAll("[data-3d-class]");
 if (classes) {
+  // window.addEventListener(
+  //   "core:ready",
+  //   () => {
+  //     const events = window.epigraph.api.getAppEvents();
+  //     console.log(events, events.hideNodeLoadingIcon.name)
+  //     window.addEventListener(
+  //       events.configuratorReadyEvent.name,
+  //       () => {
+  //         console.log('ready')
+  //         window.epigraph.api.moveCameraToCameraViewById('pole-both-mobile');
+  //       }
+  //     )
+
+  //   }
+  // )
   classes.forEach(c => {
     c.addEventListener("click", () => {
       if (window.epigraph) {
         if (c.getAttribute("data-3d-class").startsWith('both')) {
-          window.epigraph.api.makeProductClassIdActive(c.getAttribute("data-3d-class").replace('both', 'left'));
+          window.epigraph.api.moveCameraToCameraViewById(c.getAttribute("data-3d-class").replace('both', '').toLowerCase() + '-both-mobile')
+          // window.epigraph.api.makeProductClassIdActive(c.getAttribute("data-3d-class").replace('both', 'left'));
 
           if (c.hasAttribute("data-value")) {
             window.epigraph.api.switchVariantForProductClass(c.getAttribute("data-3d-class").replace('both', 'left'), variants[c.getAttribute("data-value")])

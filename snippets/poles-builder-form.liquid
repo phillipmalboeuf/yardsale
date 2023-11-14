@@ -39,7 +39,7 @@
               value="{{ variant.id }}"
               form="pole-builder"
             >
-            <label for="{{ product.id }}-{{ variant.id }}">{{ variant.option2 }}</label>
+            <label for="{{ product.id }}-{{ variant.id }}">{{ variant.option2 | replace: 'cm', '' }}</label>
             {% comment %} {{ variant.id }} {% endcomment %}
           {%- endfor -%}
         </fieldset>

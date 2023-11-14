@@ -13,6 +13,7 @@
   </div>
   <div class="builder__info">
     <h1 class="h2">{{ collection.title }}</h1>
+    {{ collection.description }}
 
     <div class="builder__info__forms">
       <input type="radio" name="options" value="both" id="both" checked>
@@ -42,12 +43,16 @@
       </div>
     </div>
 
-    <hr>
-
     <form action="/cart/add" id="pole-builder" method="post">
       <input type="hidden" name="return_to" value="checkout">
-      <button class="button--primary button--full_width" type="submit">Buy Now</button>
+      <button class="button--primary button--full_width" type="submit">Buy now<span id="price">$139.00</span></button>
     </form>
+
+    <hr>
+
+    <aside>
+      {{ section.settings.description }}
+    </aside>
   </div>
 </div>
 
@@ -59,7 +64,14 @@
 {% schema %}
 {
   "name": "Poles builder",
-  "settings": []
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "description",
+      "default": "<p><strong>Reimagined from the tips up:</strong></p><ul><li>7-series aluminum poles with matte coat finish</li><li>Swappable and magnetic handles and baskets</li><li>3D knit strap with premium metal fasteners</li><li>Ice-crushing steel tip</li><li>100% recyclable packaging</li><li>Backed against bends and breaks by our Yardsale Guarantee</li></ul>",
+      "label": "t:sections.rich-text.blocks.text.settings.text.label"
+    }
+  ]
 }
 {% endschema %}
 

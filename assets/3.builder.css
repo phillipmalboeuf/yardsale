@@ -13,8 +13,16 @@
 }
 
 .builder__info {
-  max-width: 520px;
+  max-width: 540px;
   margin: 0 auto;
+}
+
+.builder__info > .builder__info__forms {
+  margin-top: var(--gap);
+}
+
+.builder__info h1 {
+  margin-bottom: 0;
 }
 
 .builder__info__forms {
@@ -25,6 +33,10 @@
 
 .builder__info__forms > input[type='radio'] {
   display: none;
+}
+
+.builder__info__forms fieldset {
+  width: 100%;
 }
 
 .builder__info__forms > div {
@@ -60,6 +72,10 @@
 
 .builder__form p {
   width: 100%;
+}
+
+.builder__info > form {
+  margin-top: var(--gap);
 }
 
 .builder__form input[type='radio'] + label + fieldset {

@@ -22,7 +22,7 @@
             style="background-color: var(--{{ value | downcase }});"
           {% endif %}
         >
-        <label for="{{ product.id }}-{{ value }}">{{ value }}</label>
+        <label for="{{ product.id }}-{{ value }}">{{ value | replace: 'cm', '' }}</label>
         <fieldset>
           <br>
           <p>
@@ -38,6 +38,12 @@
               name="items[{{ product.id }}][id]"
               value="{{ variant.id }}"
               form="pole-builder"
+              data-value="{{ variant.option2 }}"
+              data-3d-class="{{ class }}{{ product.type }}"
+              class="{% if product.options_with_values[1].name == 'Color' %} input--color{% endif %}"
+              {% if product.options_with_values[1].name == 'Color' %}
+                style="background-color: var(--{{ variant.option2 | downcase }});"
+              {% endif %}
             >
             <label for="{{ product.id }}-{{ variant.id }}">{{ variant.option2 | replace: 'cm', '' }}</label>
             {% comment %} {{ variant.id }} {% endcomment %}

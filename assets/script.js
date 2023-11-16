@@ -51,18 +51,7 @@ if (classes) {
   window.addEventListener(
     "core:ready",
     () => {
-      console.log('ready')
       window.epigraph.api.moveCameraToCameraViewById('pole-both-mobile');
-      // const events = window.epigraph.api.getAppEvents();
-      // console.log(events, events.hideNodeLoadingIcon.name)
-      // window.addEventListener(
-      //   events.configuratorReadyEvent.name,
-      //   () => {
-      //     console.log('ready')
-      //     window.epigraph.api.moveCameraToCameraViewById('pole-both-mobile');
-      //   }
-      // )
-
     }
   )
   classes.forEach(c => {
@@ -71,6 +60,8 @@ if (classes) {
         if (c.getAttribute("data-3d-class").startsWith('both')) {
           window.epigraph.api.moveCameraToCameraViewById(c.getAttribute("data-3d-class").replace('both', '').toLowerCase() + '-both-mobile')
           // window.epigraph.api.makeProductClassIdActive(c.getAttribute("data-3d-class").replace('both', 'left'));
+
+          console.log(c.getAttribute("data-3d-class").replace('both', '').toLowerCase() + '-both-mobile', c.getAttribute("data-value"))
 
           if (c.hasAttribute("data-value")) {
             window.epigraph.api.switchVariantForProductClass(c.getAttribute("data-3d-class").replace('both', 'left'), variants[c.getAttribute("data-value")])

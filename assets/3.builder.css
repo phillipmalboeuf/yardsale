@@ -78,6 +78,11 @@
   margin-top: var(--gap);
 }
 
+.builder__info > center {
+  margin-top: calc(var(--gap) * -0.5);
+  margin-bottom: calc(var(--gap) * 1);
+}
+
 .builder__form input[type='radio'] + label + fieldset {
   display: none;
 }

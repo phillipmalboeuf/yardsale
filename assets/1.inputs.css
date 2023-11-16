@@ -71,7 +71,6 @@ input[type='radio'] {
   border-radius: 50%;
   background-color: transparent;
   cursor: pointer;
-  vertical-align: text-bottom;
 
   display: inline-block;
   flex-shrink: 0;
@@ -84,6 +83,7 @@ input[type='radio'] {
 input[type='radio'] + label {
   cursor: pointer;
   margin-right: calc(var(--gap) / 2);
+  align-self: center;
 }
 
 input[type='radio'] + label:hover {

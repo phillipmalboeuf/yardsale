@@ -1,7 +1,7 @@
 {% comment %} {{ 'section-main-product.css' | asset_url | stylesheet_tag }} {% endcomment %}
 {{ '3.builder.css' | asset_url | stylesheet_tag }}
 
-<div class="builder builder--{{ section.settings.media_size }} builder--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} builder--mobile-{{ section.settings.mobile_thumbnails }} grid grid--2">
+<div class="builder builder--{{ section.settings.media_size }} builder--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} builder--mobile-{{ section.settings.mobile_thumbnails }} grid grid--2 grid--1-col-tablet-down">
   <div class="builder__media">
     <epigraph-configurator-lite id="epigraphConfiguratorLite" experience-id="yardsale-ski" disable-default-ui hidden>
       <img

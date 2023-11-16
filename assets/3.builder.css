@@ -97,3 +97,13 @@
   top: calc(var(--gap) * 1);
 }
 
+@media screen and (max-width: 750px) {
+  .builder {
+    padding: calc(var(--gap) / 2);
+  }
+
+  .builder__media {
+    position: static;
+    height: 50vh;
+}
+}

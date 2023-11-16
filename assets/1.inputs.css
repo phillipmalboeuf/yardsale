@@ -90,7 +90,9 @@ input[type='radio'] + label:hover {
   border-color: rgb(var(--color-foreground));
 }
 
-input[type='radio']:checked {
+input[type='radio']:checked,
+input[type='radio']:hover,
+input[type='radio']:focus {
   background-color: rgb(var(--color-foreground));
 }
 
@@ -109,6 +111,11 @@ input[type='radio'].input--color:after {
   /* position: absolute;
   left: 1em;
   top: 1em; */
+}
+
+input[type='radio'].input--color:hover,
+input[type='radio'].input--color:focus {
+  border-color: rgb(var(--color-foreground));
 }
 
 input[type='radio'].input--color + label {

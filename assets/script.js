@@ -48,21 +48,23 @@ const variants = {
 
 const classes = document.querySelectorAll("[data-3d-class]");
 if (classes) {
-  // window.addEventListener(
-  //   "core:ready",
-  //   () => {
-  //     const events = window.epigraph.api.getAppEvents();
-  //     console.log(events, events.hideNodeLoadingIcon.name)
-  //     window.addEventListener(
-  //       events.configuratorReadyEvent.name,
-  //       () => {
-  //         console.log('ready')
-  //         window.epigraph.api.moveCameraToCameraViewById('pole-both-mobile');
-  //       }
-  //     )
+  window.addEventListener(
+    "core:ready",
+    () => {
+      console.log('ready')
+      window.epigraph.api.moveCameraToCameraViewById('pole-both-mobile');
+      // const events = window.epigraph.api.getAppEvents();
+      // console.log(events, events.hideNodeLoadingIcon.name)
+      // window.addEventListener(
+      //   events.configuratorReadyEvent.name,
+      //   () => {
+      //     console.log('ready')
+      //     window.epigraph.api.moveCameraToCameraViewById('pole-both-mobile');
+      //   }
+      // )
 
-  //   }
-  // )
+    }
+  )
   classes.forEach(c => {
     c.addEventListener("click", () => {
       if (window.epigraph) {

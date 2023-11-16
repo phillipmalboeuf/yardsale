@@ -15,6 +15,12 @@
   padding: calc(var(--gap) / var(--scale));
 }
 
+.header:not([style]) {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background: rgba(var(--color-background), 0.66) !important;
+}
+
 .header[data-header] {
   position: fixed;
 }

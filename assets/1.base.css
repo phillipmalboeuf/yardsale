@@ -22,7 +22,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 
   color: rgb(var(--color-foreground));
-  background: rgb(var(--color-foreground));
+  background: rgb(var(--color-background));
 }
 
 main[role="main"] {

@@ -23,9 +23,9 @@ if (builder) {
         .filter(([key]) => !key.startsWith('left') && !key.startsWith('right'))
         .filter(([key]) => !key.includes(left[0]) || key.includes(left[0]+'-'+left[1]))
         .filter(([key]) => !key.includes(right[0]) || key.includes(right[0]+'-'+right[1]))
-        .map(([key, value]) => `${key}=${value}`)
+        .map(([key, value]) => `${key}=${value}%26${key.replace('[id]','[properties][Pole]')}=${key.includes('left') ? '1st' : '2nd'}`).reverse()
 
-    window.location = `/cart/clear?return_to=${`/cart/add?${params.join('%26')}`}`
+    window.location = `/cart/clear?return_to=${`/cart/add?${params.join('%26')}%26return_to=checkout`}`
   })
 }
 

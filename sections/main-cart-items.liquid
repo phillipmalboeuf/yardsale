@@ -25,13 +25,13 @@
 
 <cart-items class="page-width{% if cart == empty %} is-empty{% else %} section-{{ section.id }}-padding{% endif %}">
   <div class="title-wrapper-with-link">
-    <h1 class="title title--primary">{{ 'sections.cart.title' | t }}</h1>
-    <a href="{{ routes.all_products_collection_url }}" class="underlined-link">{{ 'general.continue_shopping' | t }}</a>
+    <h2 class="title title--primary">{{ 'sections.cart.title' | t }}</h2>
+    <a href="/collections/p1-poles" class="underlined-link">{{ 'general.continue_shopping' | t }}</a>
   </div>
 
   <div class="cart__warnings">
-    <h1 class="cart__empty-text">{{ 'sections.cart.empty' | t }}</h1>
-    <a href="{{ routes.all_products_collection_url }}" class="button">
+    <h3 class="cart__empty-text">{{ 'sections.cart.empty' | t }}</h3>
+    <a href="/collections/p1-poles" class="button">
       {{ 'general.continue_shopping' | t }}
     </a>
 

@@ -2,7 +2,12 @@
   <form class="builder__form">
     <hr>
     <p>
-      <strong>{{ forloop.index }}. {{ product.title }}</strong>
+      <strong>
+        {{- forloop.index }}.
+        {% if product.options_with_values[0].name == 'Size' %}Select{% else %}Choose{% endif %}
+        a {{ product.type | downcase }}
+        {{ product.options_with_values[0].name | downcase -}}
+      </strong>
     </p>
     {%- for value in product.options_with_values[0].values -%}
       {%- assign variants = product.variants | where: 'option1', value -%}
@@ -12,8 +17,9 @@
           id="{{ product.id }}-{{ value }}"
           data-value="{{ value | escape }}"
           data-3d-class="{{ class }}{{ product.type }}"
-          name="{{ product.id }}-{{ product.options_with_values[0].name }}"
+          name="{{ class }}-{{ product.id }}"
           value="{{ value }}"
+          form="pole-builder"
           {% if forloop.index0 == 0 %}
             checked
           {% endif %}
@@ -26,7 +32,15 @@
         <fieldset>
           <br>
           <p>
-            <strong>{{ product.options_with_values[1].name }}</strong>
+            <strong>
+              {% if product.options_with_values[1].name == 'Size' %}Select{% else %}Choose{% endif %}
+              a {{ product.type | downcase }}
+              {{ product.options_with_values[1].name | downcase -}}
+              {% comment %}
+                {{- product.title }}
+                {{ product.options_with_values[1].name -}}
+              {% endcomment %}
+            </strong>
           </p>
           {%- for variant in variants -%}
             <input
@@ -35,7 +49,7 @@
                 checked
               {% endif %}
               id="{{ product.id }}-{{ variant.id }}"
-              name="items[{{ product.id }}][id]"
+              name="items[{{ class }}-{{ product.id }}-{{ variant.option1 }}][id]"
               value="{{ variant.id }}"
               form="pole-builder"
               data-value="{{ variant.option2 }}"
@@ -58,7 +72,7 @@
           id="{{ product.id }}-{{ variants[0].id }}"
           data-value="{{ value | escape }}"
           data-3d-class="{{ class }}{{ product.type }}"
-          name="items[{{ product.id }}][id]"
+          name="items[{{ class }}-{{ product.id }}][id]"
           value="{{ variants[0].id }}"
           form="pole-builder"
           class="{% if product.options_with_values[0].name == 'Color' %} input--color{% endif %}"

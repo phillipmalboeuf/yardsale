@@ -61,7 +61,7 @@ input:focus ~ button:hover {
 }
 
 fieldset {
-  display: inline-block;
+  display: block;
   border: none;
 }
 
@@ -102,29 +102,38 @@ input[type='radio'].input--color {
   height: 2em;
   border-radius: 0.666em;
   border-color: transparent;
+  vertical-align: middle;
   /* background-repeat: no-repeat;
   background-position: -100%; */
 }
 
 input[type='radio'].input--color:after {
-  /* content: attr(data-value); */
+  content: attr(data-value);
+  display: none;
   /* position: absolute;
   left: 1em;
   top: 1em; */
 }
 
 input[type='radio'].input--color:hover,
-input[type='radio'].input--color:focus {
+input[type='radio'].input--color:focus,
+input[type='radio'].input--color:checked {
   border-color: rgb(var(--color-foreground));
 }
 
 input[type='radio'].input--color + label {
   display: none;
+  order: 99;
 }
 
-input[type='radio'].input--color:checked {
-  border-color: rgb(var(--color-foreground));
-  /* background-position: 0.66em calc(100% - 0.66em); */
+/* input[type='radio'].input--color:hover + label,
+input[type='radio'].input--color:focus + label, */
+input[type='radio'].input--color:checked + label {
+  display: inline-block;
+}
+
+input[type='radio'].input--color:checked + label {
+  order: 98;
 }
 
 

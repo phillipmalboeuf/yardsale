@@ -13,12 +13,19 @@ if (epigraph) {
 const builder = document.getElementById("pole-builder");
 if (builder) {
   builder.addEventListener("submit", e => {
-    // e.preventDefault()
+    e.preventDefault()
 
     const formData = new FormData(e.target);
     const formProps = Object.fromEntries(formData);
 
-    console.log(formProps)
+    const [left, right] = Object.entries(formProps).filter(([key]) => key.startsWith('left') || key.startsWith('right'))
+    const params = Object.entries(formProps)
+        .filter(([key]) => !key.startsWith('left') && !key.startsWith('right'))
+        .filter(([key]) => !key.includes(left[0]) || key.includes(left[0]+'-'+left[1]))
+        .filter(([key]) => !key.includes(right[0]) || key.includes(right[0]+'-'+right[1]))
+        .map(([key, value]) => `${key}=${value}`)
+
+    window.location = `/cart/clear?return_to=${`/cart/add?${params.join('%26')}`}`
   })
 }
 
@@ -76,19 +83,31 @@ if (classes) {
           window.epigraph.api.moveCameraToCameraViewById(c.getAttribute("data-3d-class").replace('both', '').toLowerCase() + '-both-mobile')
           // window.epigraph.api.makeProductClassIdActive(c.getAttribute("data-3d-class").replace('both', 'left'));
 
-          console.log(c.getAttribute("data-3d-class").replace('both', '').toLowerCase() + '-both-mobile', c.getAttribute("data-value"))
+          console.log(variants[c.getAttribute("data-value")])
 
-          if (c.hasAttribute("data-value")) {
+          if (c.hasAttribute("data-value") && variants[c.getAttribute("data-value")]) {
             window.epigraph.api.switchVariantForProductClass(c.getAttribute("data-3d-class").replace('both', 'left'), variants[c.getAttribute("data-value")])
             window.epigraph.api.switchVariantForProductClass(c.getAttribute("data-3d-class").replace('both', 'right'), variants[c.getAttribute("data-value")])
           }
         } else {
           window.epigraph.api.makeProductClassIdActive(c.getAttribute("data-3d-class"));
-          if (c.hasAttribute("data-value")) {
+          if (c.hasAttribute("data-value") && variants[c.getAttribute("data-value")]) {
             window.epigraph.api.switchVariantForProductClass(c.getAttribute("data-3d-class"), variants[c.getAttribute("data-value")])
           }
         }
       }
+    })
+  })
+}
+
+const allvalues = document.querySelectorAll("[data-all-values]");
+if (allvalues) {
+  allvalues.forEach(a => {
+    a.addEventListener("click", () => {
+      const inputs = document.querySelectorAll(`[data-value="${a.getAttribute("data-all-values")}"]`)
+      console.log(inputs.length)
+      inputs.forEach(input => input.click())
+      window.epigraph.api.moveCameraToCameraViewById('pole-both-mobile')
     })
   })
 }

@@ -67,6 +67,10 @@
     width: 100%;
   }
 
+  /* .builder__info__forms > label[for=both] + div > .builder__form:not(:first-of-type) {
+    display: none;
+  } */
+
 .builder__form {
   margin: 0 0 var(--base);
   display: flex;
@@ -76,6 +80,7 @@
 
 .builder__form p {
   width: 100%;
+  margin-bottom: 0;
 }
 
 .builder__info > form {
@@ -92,7 +97,9 @@
 }
 
 .builder__form input[type='radio']:checked + label + fieldset {
-  display: block;
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(var(--gap) / 4);
   order: 99;
 }
 

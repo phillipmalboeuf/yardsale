@@ -49,7 +49,65 @@
       <label class="button" for="both" data-3d-class="bothPole">Both</label>
 
       <div>
-        {% render 'poles-builder-form', class: 'both' %}
+        <form class="builder__form">
+          <hr>
+          <p>
+            <strong>
+              1. Select a size
+              {% comment %} {{ collection.products[0].options_with_values[0].name }} {% endcomment %}
+            </strong>
+          </p>
+
+          {%- for value in collection.products[0].options_with_values[0].values -%}
+            <input
+              type="radio"
+              id="{{ collection.id }}-{{ value }}"
+              {% comment %} data-value="{{ value | escape }}" {% endcomment %}
+              data-all-values="{{ value | escape }}"
+              {% comment %} data-3d-class="both{{ collection.products[0].type }}" {% endcomment %}
+              name="{{ collection.id }}-{{ collection.products[0].options_with_values[0].name }}"
+              value="{{ value }}"
+              {% if forloop.index0 == 0 %}
+                checked
+              {% endif %}
+              class="{% if collection.products[0].options_with_values[0].name == 'Color' %} input--color{% endif %}"
+              {% if collection.products[0].options_with_values[0].name == 'Color' %}
+                style="background-color: var(--{{ value | downcase }});"
+              {% endif %}
+            >
+            <label for="{{ collection.id }}-{{ value }}">{{ value | replace: 'cm', '' }}</label>
+          {%- endfor -%}
+
+          <hr>
+
+          <p>
+            <strong>
+              2. Choose a color
+              {% comment %} {{ collection.products[0].options_with_values[0].name }} {% endcomment %}
+            </strong>
+          </p>
+
+          {%- for value in collection.products[0].options_with_values[1].values -%}
+            <input
+              type="radio"
+              id="{{ collection.id }}-{{ value }}"
+              {% comment %} data-value="{{ value | escape }}" {% endcomment %}
+              data-all-values="{{ value | escape }}"
+              {% comment %} data-3d-class="both{{ collection.products[0].type }}" {% endcomment %}
+              name="{{ collection.id }}-{{ collection.products[0].options_with_values[1].name }}"
+              value="{{ value }}"
+              {% if forloop.index0 == 0 %}
+                checked
+              {% endif %}
+              class="{% if collection.products[0].options_with_values[1].name == 'Color' %} input--color{% endif %}"
+              {% if collection.products[0].options_with_values[1].name == 'Color' %}
+                style="background-color: var(--{{ value | downcase }});"
+              {% endif %}
+            >
+            <label for="{{ collection.id }}-{{ value }}">{{ value | replace: 'cm', '' }}</label>
+          {%- endfor -%}
+        </form>
+        {% comment %} {% render 'poles-builder-form', class: 'both' %} {% endcomment %}
       </div>
 
       <input type="radio" name="options" value="seperate" id="seperate">

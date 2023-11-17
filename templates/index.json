@@ -171,6 +171,14 @@
         "mobile_content_alignment": "left"
       }
     },
+    "873411d2-5edf-4619-baf5-fa44fac975f2": {
+      "type": "rich-text",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": ""
+      }
+    },
     "cda9a249-bd53-4cc6-af49-81261315d9bd": {
       "type": "multicolumn",
       "blocks": {
@@ -265,6 +273,7 @@
     "video",
     "f2e8553e-391d-40b9-ba59-d5e82b8712b5",
     "742133b8-6152-4597-a606-78a079616c87",
+    "873411d2-5edf-4619-baf5-fa44fac975f2",
     "cda9a249-bd53-4cc6-af49-81261315d9bd",
     "a5a48154-0536-49fa-846c-5fb78758f557"
   ]

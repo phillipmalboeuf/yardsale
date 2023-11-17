@@ -38,13 +38,28 @@ if (header) {
   }
 }
 
+const onscrolls = document.querySelectorAll("[data-onscroll]");
+if (onscrolls) {
+  const observer = new IntersectionObserver((elements, observer) => {
+    elements.forEach((element, index) => {
+      if (element.isIntersecting) {
+        !element.target.classList.contains('visible') && element.target.classList.add('visible')
+      } else {
+        element.target.classList.contains('visible') && element.target.classList.remove('visible')
+      }
+    });
+  }, {
+    rootMargin: '0px 0px 0px 0px',
+  });
+  onscrolls.forEach((element) => observer.observe(element));
+}
+
 const variants = {
   'Gondola': 'red',
   'Powder': 'sand',
   'Glade': 'green',
   'Sunlight': 'yellow',
 }
-
 
 const classes = document.querySelectorAll("[data-3d-class]");
 if (classes) {

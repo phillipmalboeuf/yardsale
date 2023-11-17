@@ -18,14 +18,16 @@
 
 {% assign scheme1 = settings.color_schemes | first %}
 
-<div class="image-with-text image-with-text--{{ section.settings.content_layout }} page-width isolate{% if settings.text_boxes_border_thickness > 0 and settings.text_boxes_border_opacity > 0 and settings.media_border_thickness > 0 and settings.media_border_opacity > 0 %} collapse-borders{% endif %}{% unless section.settings.color_scheme == scheme1 and settings.media_border_thickness > 0 and settings.text_boxes_shadow_opacity == 0 and settings.text_boxes_border_thickness == 0 or settings.text_boxes_border_opacity == 0 %} collapse-corners{% endunless %} section-{{ section.id }}-padding{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+<div class="image-with-text image-with-text--{{ section.settings.content_layout }} page-width isolate{% if settings.text_boxes_border_thickness > 0 and settings.text_boxes_border_opacity > 0 and settings.media_border_thickness > 0 and settings.media_border_opacity > 0 %} collapse-borders{% endif %}{% unless section.settings.color_scheme == scheme1 and settings.media_border_thickness > 0 and settings.text_boxes_shadow_opacity == 0 and settings.text_boxes_border_thickness == 0 or settings.text_boxes_border_opacity == 0 %} collapse-corners{% endunless %} section-{{ section.id }}-padding{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} color-{{ section.settings.color_scheme }}">
   <div class="image-with-text__grid grid grid--gapless {% if section.settings.layout contains 'text_' %}grid--1-col-tablet-down grid--{% if section.settings.desktop_image_width == 'medium' %}2{% else %}3{% endif %}{% endif %}{% if section.settings.layout == 'image_second' or section.settings.layout == 'text_left' %} image-with-text__grid--reverse{% endif %}">
     <div class="image-with-text__media-item image-with-text__media-item--{{ section.settings.desktop_image_width }} image-with-text__media-item--{{ section.settings.desktop_content_position }} grid__item">
       <div
-        class="image-with-text__media image-with-text__media--{{ section.settings.height }} gradient color-{{ section.settings.color_scheme }} global-media-settings {% if section.settings.image != blank %}media{% else %}image-with-text__media--placeholder placeholder{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}"
-        {% if section.settings.height == 'adapt' and section.settings.image != blank %}
-          style="padding-bottom: {{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100 }}%;"
-        {% endif %}
+        class="image-with-text__media image-with-text__media--{{ section.settings.height }} global-media-settings {% if section.settings.image != blank %}media{% else %}image-with-text__media--placeholder placeholder{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}"
+        {% comment %}
+          {% if section.settings.height == 'adapt' and section.settings.image != blank %}
+            style="padding-bottom: {{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100 }}%;"
+          {% endif %}
+        {% endcomment %}
       >
         {%- if section.settings.image != blank -%}
           {%- if section.settings.image_behavior == 'ambient' or section.settings.image_behavior == 'zoom-in' -%}
@@ -60,6 +62,7 @@
           {% case block.type %}
             {%- when 'heading' -%}
               <h2
+                data-onscroll
                 class="image-with-text__heading inline-richtext {{ block.settings.heading_size }}"
                 {{ block.shopify_attributes }}
               >
@@ -67,18 +70,24 @@
               </h2>
             {%- when 'caption' -%}
               <p
+                data-onscroll
                 class="image-with-text__text image-with-text__text--caption {{ block.settings.text_style }} {{ block.settings.text_style }}--{{ block.settings.text_size }} {{ block.settings.text_style }}"
                 {{ block.shopify_attributes }}
               >
                 {{ block.settings.caption | escape }}
               </p>
             {%- when 'text' -%}
-              <div class="image-with-text__text rte {{ block.settings.text_style }}" {{ block.shopify_attributes }}>
+              <div
+                data-onscroll
+                class="image-with-text__text rte {{ block.settings.text_style }}"
+                {{ block.shopify_attributes }}
+              >
                 {{ block.settings.text }}
               </div>
             {%- when 'button' -%}
               {%- if block.settings.button_label != blank -%}
                 <a
+                  data-onscroll
                   {% if block.settings.button_link == blank %}
                     role="link" aria-disabled="true"
                   {% else %}

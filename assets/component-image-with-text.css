@@ -342,7 +342,7 @@
 }
 
   .image-with-text__content {
-    padding: var(--gap);
+    padding: calc(var(--gap) * 2);
   }
 
 .image-with-text__content > * + * {
@@ -365,11 +365,11 @@
 }
 
 .image-with-text__content .button + .image-with-text__text {
-  margin-top: 2rem;
+  margin-top: var(--gap);
 }
 
 .image-with-text__content .image-with-text__text + .button {
-  margin-top: 3rem;
+  margin-top: var(--gap);
 }
 
 .image-with-text__heading {

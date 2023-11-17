@@ -7,6 +7,7 @@
         {%- case block.type -%}
           {%- when 'heading' -%}
             <h2
+              data-onscroll
               class="rich-text__heading {{ block.settings.heading_size }}"
               {{ block.shopify_attributes }}
             >
@@ -14,6 +15,7 @@
             </h2>
           {%- when 'caption' -%}
             <blockquote
+              data-onscroll
               class="rich-text__caption {{ block.settings.text_style }} {{ block.settings.text_size }}"
               {{ block.shopify_attributes }}
             >
@@ -21,6 +23,7 @@
             </blockquote>
           {%- when 'text' -%}
             <div
+              data-onscroll
               class="rich-text__text {{ block.settings.text_size }}"
               {{ block.shopify_attributes }}
             >
@@ -28,6 +31,7 @@
             </div>
           {%- when 'button' -%}
             <div
+              data-onscroll
               class="rich-text__buttons{% if block.settings.button_label != blank and block.settings.button_label_2 != blank %} rich-text__buttons--multiple{% endif %}"
               {{ block.shopify_attributes }}
             >

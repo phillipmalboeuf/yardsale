@@ -118,6 +118,11 @@ cart-items {
   border-bottom-right-radius: 0;
 }
 
+.cart__footer,
+.cart__note {
+  padding: var(--gap);
+}
+
 @media screen and (min-width: 750px) {
   .cart__items {
     grid-column-start: 1;

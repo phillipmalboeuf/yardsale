@@ -66,7 +66,29 @@
                 class="image-with-text__heading inline-richtext {{ block.settings.heading_size }}"
                 {{ block.shopify_attributes }}
               >
-                {{ block.settings.heading }}
+                {{
+                  block.settings.heading
+                  | replace: 'P1 Poles',
+                    'P1 Poles<svg style="vertical-align: middle" width="50" height="50" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="path-1-inside-1_3027_2003" fill="white">
+<path d="M10.3708 10.3066C9.05763 11.6199 8.01593 13.1789 7.30522 14.8947C6.59451 16.6105 6.22871 18.4495 6.22871 20.3066C6.22871 22.1638 6.59451 24.0028 7.30522 25.7186C8.01593 27.4344 9.05763 28.9934 10.3708 30.3066L20.3708 20.3066L10.3708 10.3066Z"/>
+</mask>
+<path d="M10.3708 10.3066C9.05763 11.6199 8.01593 13.1789 7.30522 14.8947C6.59451 16.6105 6.22871 18.4495 6.22871 20.3066C6.22871 22.1638 6.59451 24.0028 7.30522 25.7186C8.01593 27.4344 9.05763 28.9934 10.3708 30.3066L20.3708 20.3066L10.3708 10.3066Z" fill="#D85443" stroke="#D85443" stroke-width="5.26219" mask="url(#path-1-inside-1_3027_2003)"/>
+<mask id="path-2-inside-2_3027_2003" fill="white">
+<path d="M10.3708 10.3066C13.023 7.65448 16.6201 6.1645 20.3709 6.16451C24.1216 6.16451 27.7187 7.65448 30.3709 10.3066L20.3708 20.3066L10.3708 10.3066Z"/>
+</mask>
+<path d="M10.3708 10.3066C13.023 7.65448 16.6201 6.1645 20.3709 6.16451C24.1216 6.16451 27.7187 7.65448 30.3709 10.3066L20.3708 20.3066L10.3708 10.3066Z" fill="#D9DD7A" stroke="#D9DD7A" stroke-width="5.26219" mask="url(#path-2-inside-2_3027_2003)"/>
+<mask id="path-3-inside-3_3027_2003" fill="white">
+<path d="M30.3709 10.3066C31.6841 11.6199 32.7258 13.1789 33.4365 14.8947C34.1472 16.6105 34.513 18.4495 34.513 20.3066C34.513 22.1638 34.1472 24.0028 33.4365 25.7186C32.7258 27.4344 31.6841 28.9934 30.3708 30.3066L20.3708 20.3066L30.3709 10.3066Z"/>
+</mask>
+<path d="M30.3709 10.3066C31.6841 11.6199 32.7258 13.1789 33.4365 14.8947C34.1472 16.6105 34.513 18.4495 34.513 20.3066C34.513 22.1638 34.1472 24.0028 33.4365 25.7186C32.7258 27.4344 31.6841 28.9934 30.3708 30.3066L20.3708 20.3066L30.3709 10.3066Z" fill="#69806D" stroke="#69806D" stroke-width="5.26219" mask="url(#path-3-inside-3_3027_2003)"/>
+<mask id="path-4-inside-4_3027_2003" fill="white">
+<path d="M30.3709 30.3066C29.0576 31.6199 27.4986 32.6616 25.7828 33.3723C24.067 34.083 22.228 34.4488 20.3708 34.4488C18.5137 34.4488 16.6747 34.083 14.9589 33.3723C13.2431 32.6616 11.6841 31.6199 10.3708 30.3066L20.3708 20.3066L30.3709 30.3066Z"/>
+</mask>
+<path d="M30.3709 30.3066C29.0576 31.6199 27.4986 32.6616 25.7828 33.3723C24.067 34.083 22.228 34.4488 20.3708 34.4488C18.5137 34.4488 16.6747 34.083 14.9589 33.3723C13.2431 32.6616 11.6841 31.6199 10.3708 30.3066L20.3708 20.3066L30.3709 30.3066Z" fill="#B6B0AA" stroke="#B6B0AA" stroke-width="5.26219" mask="url(#path-4-inside-4_3027_2003)"/>
+</svg>
+'
+                }}
               </h2>
             {%- when 'caption' -%}
               <p
@@ -82,7 +104,17 @@
                 class="image-with-text__text rte {{ block.settings.text_style }}"
                 {{ block.shopify_attributes }}
               >
-                {{ block.settings.text }}
+                {{
+                  block.settings.text
+                  | replace: '[epigraph]',
+                    '<epigraph-configurator-lite id="epigraphConfiguratorLite" experience-id="yardsale-ski" disable-default-ui hidden>
+      <img
+        slot="splash-screen-image"
+        style="display:none;"
+      >
+      <span slot="splash-screen-text"></span>
+    </epigraph-configurator-lite>'
+                }}
               </div>
             {%- when 'button' -%}
               {%- if block.settings.button_label != blank -%}

@@ -1,5 +1,5 @@
 .cart-items,
-cart-items {
+cart-items .title-wrapper-with-link {
   padding: calc(var(--gap) * 2);
 }
 

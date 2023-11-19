@@ -10,23 +10,36 @@ if (epigraph) {
   );
 }
 
+function builderParams(form, seperator='%26') {
+  const formData = new FormData(form);
+  const formProps = Object.fromEntries(formData);
+
+  const [left, right] = Object.entries(formProps).filter(([key]) => key.startsWith('left') || key.startsWith('right'))
+  const params = Object.entries(formProps)
+      .filter(([key]) => !key.startsWith('left') && !key.startsWith('right'))
+      .filter(([key]) => !key.includes(left[0]) || key.includes(left[0]+'-'+left[1]))
+      .filter(([key]) => !key.includes(right[0]) || key.includes(right[0]+'-'+right[1]))
+      .map(([key, value]) => `${key}=${value}${seperator}${key.replace('[id]','[properties][Pole]')}=${key.includes('left') ? '1st' : '2nd'}`).reverse()
+
+  return params
+}
+
 const builder = document.getElementById("pole-builder");
 if (builder) {
   builder.addEventListener("submit", e => {
     e.preventDefault()
 
-    const formData = new FormData(e.target);
-    const formProps = Object.fromEntries(formData);
-
-    const [left, right] = Object.entries(formProps).filter(([key]) => key.startsWith('left') || key.startsWith('right'))
-    const params = Object.entries(formProps)
-        .filter(([key]) => !key.startsWith('left') && !key.startsWith('right'))
-        .filter(([key]) => !key.includes(left[0]) || key.includes(left[0]+'-'+left[1]))
-        .filter(([key]) => !key.includes(right[0]) || key.includes(right[0]+'-'+right[1]))
-        .map(([key, value]) => `${key}=${value}%26${key.replace('[id]','[properties][Pole]')}=${key.includes('left') ? '1st' : '2nd'}`).reverse()
-
-    window.location = `/cart/clear?return_to=${`/cart/add?${params.join('%26')}%26return_to=checkout`}`
+    window.location = `/cart/clear?return_to=${`/cart/add?${builderParams(e.target).join('%26')}%26return_to=checkout`}`
   })
+
+  const add = document.getElementById("add-to-cart");
+  if (add) {
+    add.addEventListener("click", e => {
+      e.preventDefault()
+
+      window.location = `/cart/add?${builderParams(builder, '&').join('&')}`
+    })
+  }
 }
 
 const header = document.getElementById("header");

@@ -4,7 +4,7 @@
 
 h1,
 .h1 {
-	font-size: calc(var(--base) * var(--scale) * 3);
+	font-size: calc(var(--base) * var(--scale) * 2.5);
   line-height: 1;
 
   @media (max-width: 888px) {
@@ -14,7 +14,7 @@ h1,
 
 h2,
 .h2 {
-	font-size: calc(var(--base) * var(--scale) * 2);
+	font-size: calc(var(--base) * var(--scale) * 1.75);
   line-height: 1;
 
   @media (max-width: 888px) {

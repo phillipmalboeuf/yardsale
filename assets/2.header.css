@@ -12,7 +12,8 @@
   /* color: rgb(var(--color-foreground));
   background: linear-gradient(rgba(var(--color-background), 0.666), rgba(var(--color-background), 0)); */
   transition: color 333ms, background 333ms;
-  padding: calc(var(--gap) / var(--scale));
+  padding: calc(var(--gap) / var(--scale) / 1.5) calc(var(--gap) / var(--scale));
+  font-size: 0.88em;
 }
 
 .header:not([style]) {
@@ -30,6 +31,10 @@
   padding: calc(var(--base) / var(--scale));
 }
 
+  .header__logo svg {
+    height: 62px;
+  }
+
   .header nav {
     flex: 1;
     display: flex;
@@ -37,6 +42,7 @@
 
   .header > nav a.button {
     margin-right: calc(var(--gap) / 2);
+    padding: calc(var(--gap) / 3) calc(var(--gap) / 1.5);
   }
 
   .header > nav a:not(.button) {

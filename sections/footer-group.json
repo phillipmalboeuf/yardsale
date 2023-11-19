@@ -11,6 +11,7 @@
             "color_scheme": "inverse",
             "heading": "Quick links",
             "menu": "footer",
+            "subtext": "<p>YARDSALE - A big fall in which a skier or snowboarder loses their skis, gloves, hat and poles across the piste, thus resembling a yard sale!<\/p>",
             "text_size": "medium"
           }
         },
@@ -18,7 +19,7 @@
           "type": "newsletter",
           "settings": {
             "color_scheme": "inverse",
-            "heading": "<h6>Newsletter Subscription<\/h6><h5>Subscribe and get 10% off<\/h5>",
+            "heading": "<h6><strong>Newsletter Subscription<\/strong><\/h6><h5>Join us!<\/h5>",
             "label": "Enter your email to join our mailing list",
             "cta": "Sign up",
             "tagline": "",

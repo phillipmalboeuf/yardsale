@@ -6,7 +6,7 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Ski poles you’ll <strong>actually<\/strong> want to brag about",
+            "heading": "Ski poles that <strong>don't suck<\/strong>",
             "heading_size": "h1"
           }
         }
@@ -18,9 +18,9 @@
         "image": "shopify:\/\/shop_images\/Screenshot_2023-10-15_at_6.35.03_PM.png",
         "image_overlay_opacity": 0,
         "image_height": "medium",
-        "desktop_content_position": "bottom-left",
+        "desktop_content_position": "middle-center",
         "show_text_box": false,
-        "desktop_content_alignment": "left",
+        "desktop_content_alignment": "center",
         "color_scheme": "inverse",
         "mobile_content_alignment": "left",
         "stack_images_on_mobile": false,
@@ -88,7 +88,7 @@
         "template--21549409567031__f2e8553e-391d-40b9-ba59-d5e82b8712b5-heading-1": {
           "type": "heading",
           "settings": {
-            "heading": "Serious design for good times",
+            "heading": "Built to simplify your ski day",
             "heading_size": "h2"
           }
         }
@@ -146,8 +146,8 @@
             "caption": "",
             "heading": "Mix-and-match colors",
             "text": "",
-            "button_label": "",
-            "button_link": ""
+            "button_label": "Learn more →",
+            "button_link": "shopify:\/\/pages\/p1-poles"
           }
         }
       },
@@ -246,15 +246,23 @@
             "button_link": "shopify:\/\/collections\/p1-poles",
             "button_style_secondary": false
           }
+        },
+        "1d17cba9-bef3-4346-b455-8209dfb6a42b": {
+          "type": "text",
+          "settings": {
+            "text": "<p>[epigraph]<\/p>",
+            "text_style": "body"
+          }
         }
       },
       "block_order": [
         "template--21549409567031__a5a48154-0536-49fa-846c-5fb78758f557-heading-1",
-        "template--21549409567031__a5a48154-0536-49fa-846c-5fb78758f557-button-1"
+        "template--21549409567031__a5a48154-0536-49fa-846c-5fb78758f557-button-1",
+        "1d17cba9-bef3-4346-b455-8209dfb6a42b"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/ec841c40ee621ff08d7b7aabb5ed2520-2.jpg",
-        "height": "small",
+        "height": "medium",
         "desktop_image_width": "medium",
         "layout": "text_left",
         "desktop_content_position": "top",

@@ -11,7 +11,7 @@
         "template--21605512020279__c27f6dff-97ea-43bb-be77-f48ac13d90e2-text-1": {
           "type": "text",
           "settings": {
-            "text": "P1 Poles",
+            "text": "<strong>P1 Poles<\/strong>",
             "text_style": "subtitle"
           }
         },
@@ -83,6 +83,26 @@
         "mobile_content_alignment": "left",
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "4834b6d8-34a3-4ee7-a03b-b06a6adb25b2": {
+      "type": "rich-text",
+      "blocks": {
+        "template--21605512020279__4834b6d8-34a3-4ee7-a03b-b06a6adb25b2-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Intentionally designed for <strong>smooth ski days<\/strong>",
+            "heading_size": "h2"
+          }
+        }
+      },
+      "block_order": [
+        "template--21605512020279__4834b6d8-34a3-4ee7-a03b-b06a6adb25b2-heading-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": ""
       }
     },
     "49d2d5c9-df31-47d3-88ba-bddb5ea89386": {
@@ -255,6 +275,7 @@
     "main",
     "c27f6dff-97ea-43bb-be77-f48ac13d90e2",
     "12a0edfd-3555-4e0b-94a3-311d552c7304",
+    "4834b6d8-34a3-4ee7-a03b-b06a6adb25b2",
     "49d2d5c9-df31-47d3-88ba-bddb5ea89386",
     "5126d8b3-abca-4124-a5b1-d5d29258396e",
     "a56c3583-d295-4e53-a8e3-64a3a21ae2a5"

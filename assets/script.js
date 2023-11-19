@@ -6,6 +6,25 @@ if (epigraph) {
   window.addEventListener(
     "core:ready",
     (event) => {
+      setTimeout(() => {
+        if (epigraph.hasAttribute("data-class")) {
+          // window.epigraph.api.makeProductClassIdActive("rightPole");
+        }
+
+        if (epigraph.hasAttribute("data-variant")) {
+          // window.epigraph.api.makeProductClassIdActive(epigraph.getAttribute("data-class"));
+          window.epigraph.api.switchVariantForProductClass("rightHandle", "green")
+          window.epigraph.api.switchVariantForProductClass("leftHandle", "green")
+          window.epigraph.api.switchVariantForProductClass("rightStrap", "green")
+          window.epigraph.api.switchVariantForProductClass("leftStrap", "green")
+          window.epigraph.api.switchVariantForProductClass("rightBasket", "green")
+          window.epigraph.api.switchVariantForProductClass("leftBasket", "green")
+          window.epigraph.api.switchVariantForProductClass("rightPole", "green")
+          window.epigraph.api.switchVariantForProductClass("leftPole", "green")
+        }
+      }, 1000);
+      // console.log(epigraph.getAttribute("data-class"))
+      
     }
   );
 }
@@ -181,4 +200,11 @@ function pauseAllMedia() {
   document.querySelectorAll('product-model').forEach((model) => {
     if (model.modelViewerUI) model.modelViewerUI.pause();
   });
+}
+
+function fetchConfig(type = 'json') {
+  return {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', Accept: `application/${type}` },
+  };
 }

@@ -34,7 +34,11 @@
 
 <header
   id="header"
-  {%- unless request.path contains '/collections' or request.path contains '/blogs' or request.path contains '/cart' -%}
+  {%- unless request.path contains '/collections'
+    or request.path contains '/blogs'
+    or request.path contains '/cart'
+    or request.path contains '/faq'
+  -%}
     data-header='{ "foreground": "{{ scroll_scheme.settings.text.red }},{{ scroll_scheme.settings.text.green }},{{ scroll_scheme.settings.text.blue }}", "background": "{{ scroll_scheme.settings.background.red }},{{ scroll_scheme.settings.background.green }},{{ scroll_scheme.settings.background.blue }}" }'
     style="color: rgb({{ scroll_scheme.settings.text.red }},{{ scroll_scheme.settings.text.green }},{{ scroll_scheme.settings.text.blue }}); background: linear-gradient(rgba({{ scroll_scheme.settings.background.red }},{{ scroll_scheme.settings.background.green }},{{ scroll_scheme.settings.background.blue }}, 0.666), rgba({{ scroll_scheme.settings.background.red }},{{ scroll_scheme.settings.background.green }},{{ scroll_scheme.settings.background.blue }}, 0))"
   {%- endunless -%}

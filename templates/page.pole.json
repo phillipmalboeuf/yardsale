@@ -19,7 +19,7 @@
           "type": "heading",
           "settings": {
             "heading": "Ski poles that don't suck",
-            "heading_size": "h2"
+            "heading_size": "h1"
           }
         }
       },
@@ -29,7 +29,8 @@
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/fece5373fbf65859180a3eea01ab4757.jpg",
-        "image_overlay_opacity": 30,
+        "video": "shopify:\/\/files\/videos\/Pole Click Loop for Web.mp4",
+        "image_overlay_opacity": 20,
         "image_height": "medium",
         "desktop_content_position": "middle-center",
         "show_text_box": true,
@@ -238,7 +239,7 @@
         "template--21605512020279__a56c3583-d295-4e53-a8e3-64a3a21ae2a5-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Beatuifully designed for effortless ski days<\/p>",
+            "text": "<p>Beatuifully designed for effortless ski days<\/p><p>[epigraph]<\/p>",
             "text_style": "subtitle"
           }
         },
@@ -258,10 +259,10 @@
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/28c4e326ae59c5b0fc8ce412263029ae.jpg",
-        "height": "small",
+        "height": "medium",
         "desktop_image_width": "medium",
         "layout": "text_left",
-        "desktop_content_position": "middle",
+        "desktop_content_position": "top",
         "desktop_content_alignment": "left",
         "color_scheme": "background-2",
         "image_behavior": "none",

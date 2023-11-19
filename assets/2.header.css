@@ -45,6 +45,13 @@
     padding: calc(var(--gap) / 3) calc(var(--gap) / 1.5);
   }
 
+  @media screen and (max-width: 750px) {
+    .header > nav a.button {
+      margin-right: 0;
+    }
+  }
+  
+
   .header > nav a:not(.button) {
     font-weight: bold;
     text-transform: uppercase;

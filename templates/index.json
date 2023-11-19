@@ -16,6 +16,7 @@
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/Screenshot_2023-10-15_at_6.35.03_PM.png",
+        "enable_video_looping": true,
         "image_overlay_opacity": 0,
         "image_height": "medium",
         "desktop_content_position": "middle-center",
@@ -33,7 +34,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>At Yardsale, we believe you don’t have to be the most serious skier on the mountain to have a great day. You just need good people, great products, and some sunshine. <\/p>",
+            "text": "<p>We believe you don’t have to be the most serious skier on the mountain to have a great day. We make effortless gear that simplifies skiing so everyone can make the most of their time on the mountain. <\/p>",
             "text_size": "medium"
           }
         },

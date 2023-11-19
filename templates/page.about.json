@@ -132,70 +132,25 @@
         "columns_mobile": "1"
       }
     },
-    "ef1a4d0c-4f55-49b8-ab98-a1397768f34b": {
-      "type": "image-with-text",
+    "fd60e9c5-4223-4e92-859b-fc6cbf6592bc": {
+      "type": "rich-text",
       "blocks": {
-        "template--21605508841783__ef1a4d0c-4f55-49b8-ab98-a1397768f34b-heading-1": {
+        "template--21605508841783__fd60e9c5-4223-4e92-859b-fc6cbf6592bc-heading-1": {
           "type": "heading",
           "settings": {
             "heading": "Gear that <strong>simplifies<\/strong>",
             "heading_size": "h2"
           }
         },
-        "template--21605508841783__ef1a4d0c-4f55-49b8-ab98-a1397768f34b-text-1": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Good design can be the difference between a good day and a great day. At Yardsale, we obsess over the smallest of details to ensure your ski day, weekend, and season go off without a hitch.<\/p>",
-            "text_style": "subtitle"
-          }
-        }
-      },
-      "block_order": [
-        "template--21605508841783__ef1a4d0c-4f55-49b8-ab98-a1397768f34b-heading-1",
-        "template--21605508841783__ef1a4d0c-4f55-49b8-ab98-a1397768f34b-text-1"
-      ],
-      "settings": {
-        "image": "shopify:\/\/shop_images\/70f1a0ece7cdd5bfc9869a90e3367ce1.jpg",
-        "height": "medium",
-        "desktop_image_width": "medium",
-        "layout": "image_second",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "center",
-        "color_scheme": "",
-        "image_behavior": "none",
-        "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "fd60e9c5-4223-4e92-859b-fc6cbf6592bc": {
-      "type": "rich-text",
-      "blocks": {
-        "1b6895e8-73c5-4cda-b4d0-72f69af718fc": {
-          "type": "caption",
-          "settings": {
-            "caption": "Who we are",
-            "text_style": "caption-with-letter-spacing",
-            "text_size": "small"
-          }
-        },
-        "template--21605508841783__fd60e9c5-4223-4e92-859b-fc6cbf6592bc-heading-1": {
-          "type": "heading",
-          "settings": {
-            "heading": "Ski weekend enthusiasts",
-            "heading_size": "h2"
-          }
-        },
         "template--21605508841783__fd60e9c5-4223-4e92-859b-fc6cbf6592bc-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>[this is WIP] As passionate recreational skiers, we wanted to create the best version of a product we use every day (ski poles) and a brand that spoke to who we are (ski weekend enthusiasts). The perfect ski day is about shared laughter after an epic wipeout (a yard sale!), camaraderie on the lift, and memories formed along the way with fellow skiers.<\/p>",
+            "text": "<p>Good design can be the difference between a good day and a great day. At Yardsale, we obsess over the smallest of details to ensure your ski day, weekend, and season go off without a hitch.<\/p>",
             "text_size": "medium"
           }
         }
       },
       "block_order": [
-        "1b6895e8-73c5-4cda-b4d0-72f69af718fc",
         "template--21605508841783__fd60e9c5-4223-4e92-859b-fc6cbf6592bc-heading-1",
         "template--21605508841783__fd60e9c5-4223-4e92-859b-fc6cbf6592bc-text-1"
       ],
@@ -250,7 +205,6 @@
     "e38ed699-0a05-4edb-b242-7a69100a3313",
     "3f029f60-cff3-427b-8e29-eb0c3ae1ddf2",
     "1095cce6-bfbb-4a2d-8f62-c5b7ba68be11",
-    "ef1a4d0c-4f55-49b8-ab98-a1397768f34b",
     "fd60e9c5-4223-4e92-859b-fc6cbf6592bc",
     "9cbb4029-0a60-43ea-8e5f-0cfdd1e1552e"
   ]

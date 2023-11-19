@@ -2,6 +2,11 @@
   margin-top: 0;
 }
 
+
+.main-page {
+  padding: calc(var(--gap) * 2);
+}
+
 .main-page-title {
   margin-bottom: 3rem;
 }

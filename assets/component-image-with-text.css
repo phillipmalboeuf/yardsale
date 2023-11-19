@@ -345,13 +345,15 @@
     padding: calc(var(--gap) * 2);
   }
 
+  @media screen and (max-width: 749px) {
+    .image-with-text__content {
+    padding: calc(var(--gap) * 1);
+  }
+  }
+
   .image-with-text__content > *:not(.image-with-text__text) {
     position: relative;
     z-index: 10;
-  }
-
-  .image-with-text__content epigraph-configurator-lite {
-
   }
 
   .image-with-text__content epigraph-configurator-lite {
@@ -361,6 +363,13 @@
     bottom: 0;
     left: 0;
     z-index: -1;
+  }
+
+  @media screen and (max-width: 750px) {
+  .image-with-text__content epigraph-configurator-lite {
+    height: 42vh;
+    position: static;
+  }
   }
 
 .image-with-text__content > * + * {
